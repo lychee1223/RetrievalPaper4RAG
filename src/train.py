@@ -17,9 +17,14 @@ class Experiment:
         """
         self.args = args
         self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-        self.tokenizer = BertTokenizer.from_pretrained(self.args.model_name)
 
-        # データセットとサンプラーの準備
+        # モデルと最適化
+        self.model = model.ContrastiveModel(self.args.model_name).to(self.device)
+        self.tokenizer = BertTokenizer.from_pretrained(self.args.model_name)
+        self.optimizer = torch.optim.AdamW(self.model.parameters(), lr=self.args.learning_rate)
+        self.best_valid_loss = float('inf')
+
+        # データセットの準備
         self.paper_df = self.load_data(self.args.paper_path)
         train_query_df = self.load_data(self.args.train_query_path)
         valid_query_df = self.load_data(self.args.valid_query_path)
@@ -33,16 +38,12 @@ class Experiment:
         val_dataset = dataset.ContrastiveDataset(valid_query_df, self.paper_df, self.tokenizer, self.args.max_len)
         test_dataset = dataset.ContrastiveDataset(test_query_df, self.paper_df, self.tokenizer, self.args.max_len)
 
-        print(f"Train Dataset: {len(train_dataset)}")
-
         self.train_dataloader = DataLoader(train_dataset, batch_size=self.args.batch_size, shuffle=True)
         self.valid_dataloader = DataLoader(val_dataset, batch_size=self.args.batch_size, shuffle=False)
         self.test_dataloader = DataLoader(test_dataset, batch_size=self.args.batch_size, shuffle=False)
 
-        # モデルと最適化
-        self.model = model.ContrastiveModel(self.args.model_name).to(self.device)
-        self.optimizer = torch.optim.AdamW(self.model.parameters(), lr=self.args.learning_rate)
-        self.best_valid_loss = float('inf')
+        # 保存先のディレクトリを作成
+        os.makedirs(self.args.save_path, exist_ok=True)
 
     def load_data(self, path):
         """

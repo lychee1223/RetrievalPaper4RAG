@@ -10,9 +10,9 @@ VALID_QUERY_PATH=dataset/valid_query.json
 TEST_QUERY_PATH=dataset/test_query.json
 SAVE_PATH=checkpoint/
 MODEL_NAME=google-bert/bert-base-uncased
-EPOCHS=20
+EPOCHS=5
 BATCH_SIZE=32
-LEARNING_RATE=1e-5
+LEARNING_RATE=1e-2
 MAX_LEN=512
 TEMPERATURE=0.07 
 
