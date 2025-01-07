@@ -1,0 +1,2172 @@
+[
+    {
+        "query": [
+            "What are the main developments in geophysics?",
+            "What are the main disadvantages of geophysics?",
+            "What are the main benefits of geophysics?",
+            "What are the main contributions in geophysics?",
+            "What are the main issues of geophysics?"
+        ],
+        "category": "geophysics"
+    },
+    {
+        "query": [
+            "What are the key ideas in high energy physics - experiment?",
+            "What are the key findings in high energy physics - experiment?",
+            "What key studies address the challenges in high energy physics - experiment?",
+            "What are the key techniques in high energy physics - experiment?",
+            "What are the main theories in high energy physics - experiment?"
+        ],
+        "category": "high energy physics - experiment"
+    },
+    {
+        "query": [
+            "What are the main limitations of high energy physics - phenomenology?",
+            "What are the latest developments in high energy physics - phenomenology as seen in the literature?",
+            "What are the main theories in high energy physics - phenomenology?",
+            "What are the main systems in high energy physics - phenomenology?",
+            "What are the main disadvantages of high energy physics - phenomenology?"
+        ],
+        "category": "high energy physics - phenomenology"
+    },
+    {
+        "query": [
+            "What are the main results in instrumentation and detectors?",
+            "What are the main models in instrumentation and detectors?",
+            "What are the main theories in instrumentation and detectors?",
+            "What are the core concepts in instrumentation and detectors?",
+            "Can you provide examples of influential work in instrumentation and detectors?"
+        ],
+        "category": "instrumentation and detectors"
+    },
+    {
+        "query": [
+            "What are the main innovations in computer vision and pattern recognition?",
+            "What are the main issues of computer vision and pattern recognition?",
+            "Can you provide an overview of the key concepts in computer vision and pattern recognition?",
+            "What are the seminal papers in computer vision and pattern recognition?",
+            "What are the main uses of computer vision and pattern recognition?"
+        ],
+        "category": "computer vision and pattern recognition"
+    },
+    {
+        "query": [
+            "What are the main approaches in software engineering?",
+            "What are the main tools in software engineering?",
+            "What are the main strategies in software engineering?",
+            "What key studies address the challenges in software engineering?",
+            "What are the main implications in software engineering?"
+        ],
+        "category": "software engineering"
+    },
+    {
+        "query": [
+            "What are the main issues of machine learning?",
+            "What are the main innovations in machine learning?",
+            "What are the main problems of machine learning?",
+            "What are the main algorithms in machine learning?",
+            "What are the key findings in machine learning?"
+        ],
+        "category": "machine learning"
+    },
+    {
+        "query": [
+            "What are the main strategies in performance?",
+            "Can you provide an overview of the key concepts in performance?",
+            "What key studies address the challenges in performance?",
+            "What are the main breakthroughs in performance?",
+            "What are the latest developments in performance as seen in the literature?"
+        ],
+        "category": "performance"
+    },
+    {
+        "query": [
+            "What experimental or theoretical work stands out in computation and language?",
+            "Can you provide recent publications on computation and language?",
+            "What are the main applications of computation and language?",
+            "What are the main insights in computation and language?",
+            "What are the main architectures in computation and language?"
+        ],
+        "category": "computation and language"
+    },
+    {
+        "query": [
+            "What are the main applications of information retrieval?",
+            "What are the main contributions in information retrieval?",
+            "What are the main models in information retrieval?",
+            "What are the main architectures in information retrieval?",
+            "What are the main limitations of information retrieval?"
+        ],
+        "category": "information retrieval"
+    },
+    {
+        "query": [
+            "What are the main tools in fluid dynamics?",
+            "What are the main challenges of fluid dynamics?",
+            "What are the main contributions in fluid dynamics?",
+            "What are the main limitations of fluid dynamics?",
+            "What are the main methods used in fluid dynamics?"
+        ],
+        "category": "fluid dynamics"
+    },
+    {
+        "query": [
+            "What are the main advantages of numerical analysis?",
+            "Can you provide recent publications on numerical analysis?",
+            "What are the main advances in numerical analysis?",
+            "What are the main issues of numerical analysis?",
+            "What are the main algorithms in numerical analysis?"
+        ],
+        "category": "numerical analysis"
+    },
+    {
+        "query": [
+            "What key studies address the challenges in computational physics?",
+            "Can you provide examples of influential work in computational physics?",
+            "What are the main disadvantages of computational physics?",
+            "What are the main systems in computational physics?",
+            "What are the main advances in computational physics?"
+        ],
+        "category": "computational physics"
+    },
+    {
+        "query": [
+            "What are the main approaches in artificial intelligence?",
+            "What are the main trends in artificial intelligence?",
+            "What are the main applications in artificial intelligence?",
+            "What are the main implications in artificial intelligence?",
+            "Can you recommend notable case studies in artificial intelligence?"
+        ],
+        "category": "artificial intelligence"
+    },
+    {
+        "query": [
+            "What are the most influential studies in image and video processing?",
+            "What are the main advantages of image and video processing?",
+            "What are the main discoveries in image and video processing?",
+            "What are the main applications of image and video processing?",
+            "What are the core concepts in image and video processing?"
+        ],
+        "category": "image and video processing"
+    },
+    {
+        "query": [
+            "What key studies address the challenges in medical physics?",
+            "What are the core concepts in medical physics?",
+            "What are the main contributions in medical physics?",
+            "What are the main systems in medical physics?",
+            "What are the main innovations in medical physics?"
+        ],
+        "category": "medical physics"
+    },
+    {
+        "query": [
+            "What are the main theories in cryptography and security?",
+            "What are the main tools in cryptography and security?",
+            "What are the fundamental principles in cryptography and security?",
+            "What are the main systems in cryptography and security?",
+            "What are the most important concepts in cryptography and security?"
+        ],
+        "category": "cryptography and security"
+    },
+    {
+        "query": [
+            "What are the main theories in mesoscale and nanoscale physics?",
+            "What are the main tools in mesoscale and nanoscale physics?",
+            "What challenges do researchers face in mesoscale and nanoscale physics?",
+            "What are the main strategies in mesoscale and nanoscale physics?",
+            "What are the main architectures in mesoscale and nanoscale physics?"
+        ],
+        "category": "mesoscale and nanoscale physics"
+    },
+    {
+        "query": [
+            "Which papers have shaped the understanding of high energy physics - theory?",
+            "What are the main findings in high energy physics - theory?",
+            "What are the main applications in high energy physics - theory?",
+            "What are the key ideas in high energy physics - theory?",
+            "What are the main advantages of high energy physics - theory?"
+        ],
+        "category": "high energy physics - theory"
+    },
+    {
+        "query": [
+            "Can you provide recent publications on quantum physics?",
+            "Which papers have shaped the understanding of quantum physics?",
+            "What are the main tools in quantum physics?",
+            "What are the main systems in quantum physics?",
+            "What are the main concerns of quantum physics?"
+        ],
+        "category": "quantum physics"
+    },
+    {
+        "query": [
+            "What key studies address the challenges in earth and planetary astrophysics?",
+            "What are the main theories in earth and planetary astrophysics?",
+            "What are the main architectures in earth and planetary astrophysics?",
+            "What are the most influential studies in earth and planetary astrophysics?",
+            "What are the main concerns of earth and planetary astrophysics?"
+        ],
+        "category": "earth and planetary astrophysics"
+    },
+    {
+        "query": [
+            "What are the seminal papers in optimization and control?",
+            "What are the main disadvantages of optimization and control?",
+            "What are the main theories in optimization and control?",
+            "What are the most important concepts in optimization and control?",
+            "What are the main algorithms in optimization and control?"
+        ],
+        "category": "optimization and control"
+    },
+    {
+        "query": [
+            "What are the main contributions in dynamical systems?",
+            "What are the latest developments in dynamical systems as seen in the literature?",
+            "What are the main innovations in dynamical systems?",
+            "What are the main tools in dynamical systems?",
+            "What are the main benefits of dynamical systems?"
+        ],
+        "category": "dynamical systems"
+    },
+    {
+        "query": [
+            "Can you provide examples of influential work in superconductivity?",
+            "What are the main breakthroughs in superconductivity?",
+            "Can you provide recent publications on superconductivity?",
+            "What are the main issues of superconductivity?",
+            "What are the main results in superconductivity?"
+        ],
+        "category": "superconductivity"
+    },
+    {
+        "query": [
+            "What are the key findings in solar and stellar astrophysics?",
+            "What are the main results in solar and stellar astrophysics?",
+            "What are the seminal papers in solar and stellar astrophysics?",
+            "What are the main theories in solar and stellar astrophysics?",
+            "What are the main breakthroughs in solar and stellar astrophysics?"
+        ],
+        "category": "solar and stellar astrophysics"
+    },
+    {
+        "query": [
+            "What are the main concerns of astrophysics of galaxies?",
+            "What are the main approaches in astrophysics of galaxies?",
+            "What are the main models in astrophysics of galaxies?",
+            "What are the key ideas in astrophysics of galaxies?",
+            "What are the main trends in astrophysics of galaxies?"
+        ],
+        "category": "astrophysics of galaxies"
+    },
+    {
+        "query": [
+            "What are the main tools in soft condensed matter?",
+            "What are the latest developments in soft condensed matter as seen in the literature?",
+            "What are the most influential studies in soft condensed matter?",
+            "What are the main systems in soft condensed matter?",
+            "What are the main findings in soft condensed matter?"
+        ],
+        "category": "soft condensed matter"
+    },
+    {
+        "query": [
+            "What are the main innovations in high energy astrophysical phenomena?",
+            "What are the main results in high energy astrophysical phenomena?",
+            "What are the main approaches in high energy astrophysical phenomena?",
+            "What are the main insights in high energy astrophysical phenomena?",
+            "What key studies address the challenges in high energy astrophysical phenomena?"
+        ],
+        "category": "high energy astrophysical phenomena"
+    },
+    {
+        "query": [
+            "Can you provide recent publications on human-computer interaction?",
+            "What are the key findings in human-computer interaction?",
+            "What key studies address the challenges in human-computer interaction?",
+            "What are the main systems in human-computer interaction?",
+            "What are the main problems of human-computer interaction?"
+        ],
+        "category": "human-computer interaction"
+    },
+    {
+        "query": [
+            "What are the main developments in methodology of statistics?",
+            "Can you recommend notable case studies in methodology of statistics?",
+            "What are the main findings in methodology of statistics?",
+            "What are the main implications in methodology of statistics?",
+            "What are the main theories in methodology of statistics?"
+        ],
+        "category": "methodology of statistics"
+    },
+    {
+        "query": [
+            "What are the main innovations in strongly correlated electrons?",
+            "What are the main applications of strongly correlated electrons?",
+            "What are the main implications in strongly correlated electrons?",
+            "What are the main discoveries in strongly correlated electrons?",
+            "What are the main uses of strongly correlated electrons?"
+        ],
+        "category": "strongly correlated electrons"
+    },
+    {
+        "query": [
+            "What are the main systems in materials science?",
+            "What are the main limitations of materials science?",
+            "What are the most important concepts in materials science?",
+            "What are the key techniques in materials science?",
+            "What key studies address the challenges in materials science?"
+        ],
+        "category": "materials science"
+    },
+    {
+        "query": [
+            "What are the main insights in signal processing?",
+            "What are the main concerns of signal processing?",
+            "What are the main challenges of signal processing?",
+            "What are the main findings in signal processing?",
+            "Can you provide recent publications on signal processing?"
+        ],
+        "category": "signal processing"
+    },
+    {
+        "query": [
+            "What are the main advantages of neurons and cognition?",
+            "What are the main insights in neurons and cognition?",
+            "What are the main implications in neurons and cognition?",
+            "What are the main discoveries in neurons and cognition?",
+            "What are the main disadvantages of neurons and cognition?"
+        ],
+        "category": "neurons and cognition"
+    },
+    {
+        "query": [
+            "What are the main results in general relativity and quantum cosmology?",
+            "What are the main models in general relativity and quantum cosmology?",
+            "What are the main benefits of general relativity and quantum cosmology?",
+            "What are the main systems in general relativity and quantum cosmology?",
+            "What are the main problems of general relativity and quantum cosmology?"
+        ],
+        "category": "general relativity and quantum cosmology"
+    },
+    {
+        "query": [
+            "What are the seminal papers in differential geometry?",
+            "What are the main algorithms in differential geometry?",
+            "What are the main implications in differential geometry?",
+            "What are the most important concepts in differential geometry?",
+            "What are the main disadvantages of differential geometry?"
+        ],
+        "category": "differential geometry"
+    },
+    {
+        "query": [
+            "Can you provide recent publications on ordinary differential equations?",
+            "What are the main systems in ordinary differential equations?",
+            "What are the latest developments in ordinary differential equations as seen in the literature?",
+            "What are the main approaches in ordinary differential equations?",
+            "What are the main results in ordinary differential equations?"
+        ],
+        "category": "ordinary differential equations"
+    },
+    {
+        "query": [
+            "What are the main implications in applied physics?",
+            "What are the main theories in applied physics?",
+            "What are the main challenges of applied physics?",
+            "What are the most influential studies in applied physics?",
+            "What are the main benefits of applied physics?"
+        ],
+        "category": "applied physics"
+    },
+    {
+        "query": [
+            "What are the main results in optics?",
+            "Can you provide an overview of the key concepts in optics?",
+            "What are the main algorithms in optics?",
+            "What are the main applications in optics?",
+            "What are the core concepts in optics?"
+        ],
+        "category": "optics"
+    },
+    {
+        "query": [
+            "What are the key findings in analysis of pdes?",
+            "What are the most influential studies in analysis of pdes?",
+            "What are the main challenges of analysis of pdes?",
+            "What are the fundamental principles in analysis of pdes?",
+            "Can you provide examples of influential work in analysis of pdes?"
+        ],
+        "category": "analysis of pdes"
+    },
+    {
+        "query": [
+            "What are the main strategies in quantum gases?",
+            "What are the fundamental principles in quantum gases?",
+            "What are the main concerns of quantum gases?",
+            "What are the main advances in quantum gases?",
+            "What are the key techniques in quantum gases?"
+        ],
+        "category": "quantum gases"
+    },
+    {
+        "query": [
+            "Can you recommend notable case studies in functional analysis?",
+            "What are the main theories in functional analysis?",
+            "Can you provide an overview of the key concepts in functional analysis?",
+            "What are the most influential studies in functional analysis?",
+            "What are the main results in functional analysis?"
+        ],
+        "category": "functional analysis"
+    },
+    {
+        "query": [
+            "What are the main models in operator theory?",
+            "Which papers have shaped the understanding of operator theory?",
+            "What are the main insights in operator theory?",
+            "What are the main systems in operator theory?",
+            "Can you provide recent publications on operator theory?"
+        ],
+        "category": "operator theory"
+    },
+    {
+        "query": [
+            "What challenges do researchers face in data structures and algorithms?",
+            "Can you recommend notable case studies in data structures and algorithms?",
+            "What are the main challenges of data structures and algorithms?",
+            "What are the main approaches in data structures and algorithms?",
+            "What are the main discoveries in data structures and algorithms?"
+        ],
+        "category": "data structures and algorithms"
+    },
+    {
+        "query": [
+            "What are the main algorithms in physics and society?",
+            "Can you provide an overview of the key concepts in physics and society?",
+            "Can you recommend notable case studies in physics and society?",
+            "What are the main implications in physics and society?",
+            "What are the main advantages of physics and society?"
+        ],
+        "category": "physics and society"
+    },
+    {
+        "query": [
+            "Can you provide examples of influential work in disordered systems and neural networks?",
+            "What are the main trends in disordered systems and neural networks?",
+            "What are the main theories in disordered systems and neural networks?",
+            "What are the fundamental principles in disordered systems and neural networks?",
+            "What are the main issues of disordered systems and neural networks?"
+        ],
+        "category": "disordered systems and neural networks"
+    },
+    {
+        "query": [
+            "What are the main approaches in statistical mechanics?",
+            "What are the main results in statistical mechanics?",
+            "What are the main systems in statistical mechanics?",
+            "What are the key techniques in statistical mechanics?",
+            "What are the main benefits of statistical mechanics?"
+        ],
+        "category": "statistical mechanics"
+    },
+    {
+        "query": [
+            "What are the main applications of classical physics?",
+            "What are the key findings in classical physics?",
+            "What are the seminal papers in classical physics?",
+            "Can you provide recent publications on classical physics?",
+            "What are the main insights in classical physics?"
+        ],
+        "category": "classical physics"
+    },
+    {
+        "query": [
+            "What are the main limitations of computer science and game theory?",
+            "What are the main tools in computer science and game theory?",
+            "What are the main findings in computer science and game theory?",
+            "What are the key techniques in computer science and game theory?",
+            "What are the main contributions in computer science and game theory?"
+        ],
+        "category": "computer science and game theory"
+    },
+    {
+        "query": [
+            "What are the main insights in systems and control?",
+            "What are the key techniques in systems and control?",
+            "Which papers have shaped the understanding of systems and control?",
+            "What are the main developments in systems and control?",
+            "What are the fundamental principles in systems and control?"
+        ],
+        "category": "systems and control"
+    },
+    {
+        "query": [
+            "What are the main frameworks in exactly solvable and integrable systems?",
+            "What are the main problems of exactly solvable and integrable systems?",
+            "What are the main concerns of exactly solvable and integrable systems?",
+            "What are the main algorithms in exactly solvable and integrable systems?",
+            "What are the main issues of exactly solvable and integrable systems?"
+        ],
+        "category": "exactly solvable and integrable systems"
+    },
+    {
+        "query": [
+            "What are the main benefits of mathematical physics?",
+            "What are the most important concepts in mathematical physics?",
+            "What are the main theories in mathematical physics?",
+            "What challenges do researchers face in mathematical physics?",
+            "What are the key findings in mathematical physics?"
+        ],
+        "category": "mathematical physics"
+    },
+    {
+        "query": [
+            "What are the main problems of dynamical systems and ergodic theory?",
+            "What are the main benefits of dynamical systems and ergodic theory?",
+            "What are the most important concepts in dynamical systems and ergodic theory?",
+            "What are the seminal papers in dynamical systems and ergodic theory?",
+            "What are the main frameworks in dynamical systems and ergodic theory?"
+        ],
+        "category": "dynamical systems and ergodic theory"
+    },
+    {
+        "query": [
+            "What key studies address the challenges in mechanics of particles and systems?",
+            "Can you provide an overview of the key concepts in mechanics of particles and systems?",
+            "What are the fundamental principles in mechanics of particles and systems?",
+            "What are the latest developments in mechanics of particles and systems as seen in the literature?",
+            "What are the main models in mechanics of particles and systems?"
+        ],
+        "category": "mechanics of particles and systems"
+    },
+    {
+        "query": [
+            "What are the key ideas in multiagent systems?",
+            "What are the main frameworks in multiagent systems?",
+            "What are the main advances in multiagent systems?",
+            "Can you provide recent publications on multiagent systems?",
+            "What are the main problems of multiagent systems?"
+        ],
+        "category": "multiagent systems"
+    },
+    {
+        "query": [
+            "What are the seminal papers in distributed, parallel, and cluster computing?",
+            "What are the main models in distributed, parallel, and cluster computing?",
+            "What are the fundamental principles in distributed, parallel, and cluster computing?",
+            "What are the key ideas in distributed, parallel, and cluster computing?",
+            "What are the main uses of distributed, parallel, and cluster computing?"
+        ],
+        "category": "distributed, parallel, and cluster computing"
+    },
+    {
+        "query": [
+            "What are the key techniques in information theory?",
+            "What key studies address the challenges in information theory?",
+            "What are the main insights in information theory?",
+            "What are the seminal papers in information theory?",
+            "What are the main algorithms in information theory?"
+        ],
+        "category": "information theory"
+    },
+    {
+        "query": [
+            "What key studies address the challenges in neural and evolutionary computing?",
+            "What are the key ideas in neural and evolutionary computing?",
+            "What are the main theories in neural and evolutionary computing?",
+            "What are the main models in neural and evolutionary computing?",
+            "What are the main advances in neural and evolutionary computing?"
+        ],
+        "category": "neural and evolutionary computing"
+    },
+    {
+        "query": [
+            "What are the main applications of rings and algebras?",
+            "What are the main approaches in rings and algebras?",
+            "What key studies address the challenges in rings and algebras?",
+            "What are the main innovations in rings and algebras?",
+            "What are the main implications in rings and algebras?"
+        ],
+        "category": "rings and algebras"
+    },
+    {
+        "query": [
+            "What are the main applications in nonassociative rings and algebras?",
+            "What are the fundamental principles in nonassociative rings and algebras?",
+            "Can you provide examples of influential work in nonassociative rings and algebras?",
+            "What are the main breakthroughs in nonassociative rings and algebras?",
+            "What are the main problems of nonassociative rings and algebras?"
+        ],
+        "category": "nonassociative rings and algebras"
+    },
+    {
+        "query": [
+            "What experimental or theoretical work stands out in category theory; homological algebra?",
+            "What are the main disadvantages of category theory; homological algebra?",
+            "Can you recommend notable case studies in category theory; homological algebra?",
+            "What are the main breakthroughs in category theory; homological algebra?",
+            "What are the main problems of category theory; homological algebra?"
+        ],
+        "category": "category theory; homological algebra"
+    },
+    {
+        "query": [
+            "What are the seminal papers in spectral theory?",
+            "What are the main insights in spectral theory?",
+            "What experimental or theoretical work stands out in spectral theory?",
+            "What are the main applications in spectral theory?",
+            "What are the latest developments in spectral theory as seen in the literature?"
+        ],
+        "category": "spectral theory"
+    },
+    {
+        "query": [
+            "What are the main approaches in mathematical software?",
+            "What are the main applications in mathematical software?",
+            "What are the main challenges of mathematical software?",
+            "What are the main advantages of mathematical software?",
+            "What are the main architectures in mathematical software?"
+        ],
+        "category": "mathematical software"
+    },
+    {
+        "query": [
+            "What are the main strategies in programming languages?",
+            "What are the main trends in programming languages?",
+            "Can you provide an overview of the key concepts in programming languages?",
+            "What are the main frameworks in programming languages?",
+            "What are the fundamental principles in programming languages?"
+        ],
+        "category": "programming languages"
+    },
+    {
+        "query": [
+            "What are the main applications in symbolic computation?",
+            "What are the most important concepts in symbolic computation?",
+            "What are the main contributions in symbolic computation?",
+            "What are the main insights in symbolic computation?",
+            "What are the main uses of symbolic computation?"
+        ],
+        "category": "symbolic computation"
+    },
+    {
+        "query": [
+            "Can you recommend notable case studies in software?",
+            "What are the seminal papers in software?",
+            "What challenges do researchers face in software?",
+            "What are the main methods used in software?",
+            "What are the main trends in software?"
+        ],
+        "category": "software"
+    },
+    {
+        "query": [
+            "What are the main concerns of symbolic and algebraic manipulation?",
+            "What are the key techniques in symbolic and algebraic manipulation?",
+            "What experimental or theoretical work stands out in symbolic and algebraic manipulation?",
+            "Which papers have shaped the understanding of symbolic and algebraic manipulation?",
+            "What are the main uses of symbolic and algebraic manipulation?"
+        ],
+        "category": "symbolic and algebraic manipulation"
+    },
+    {
+        "query": [
+            "What are the key techniques in combinatorics?",
+            "What challenges do researchers face in combinatorics?",
+            "Can you provide examples of influential work in combinatorics?",
+            "What are the main contributions in combinatorics?",
+            "Can you provide recent publications on combinatorics?"
+        ],
+        "category": "combinatorics"
+    },
+    {
+        "query": [
+            "What are the main limitations of formal languages and automata theory?",
+            "What are the most influential studies in formal languages and automata theory?",
+            "What are the main theories in formal languages and automata theory?",
+            "What experimental or theoretical work stands out in formal languages and automata theory?",
+            "What are the main insights in formal languages and automata theory?"
+        ],
+        "category": "formal languages and automata theory"
+    },
+    {
+        "query": [
+            "What are the main advances in number theory?",
+            "Can you provide an overview of the key concepts in number theory?",
+            "What experimental or theoretical work stands out in number theory?",
+            "What are the main discoveries in number theory?",
+            "What challenges do researchers face in number theory?"
+        ],
+        "category": "number theory"
+    },
+    {
+        "query": [
+            "What are the most important concepts in theory of computing?",
+            "What are the main breakthroughs in theory of computing?",
+            "What are the latest developments in theory of computing as seen in the literature?",
+            "What are the main algorithms in theory of computing?",
+            "What are the main limitations of theory of computing?"
+        ],
+        "category": "theory of computing"
+    },
+    {
+        "query": [
+            "Can you provide recent publications on discrete mathematics in relation to computer science?",
+            "What are the key techniques in discrete mathematics in relation to computer science?",
+            "What are the main findings in discrete mathematics in relation to computer science?",
+            "What are the main challenges of discrete mathematics in relation to computer science?",
+            "What are the fundamental principles in discrete mathematics in relation to computer science?"
+        ],
+        "category": "discrete mathematics in relation to computer science"
+    },
+    {
+        "query": [
+            "What are the main results in algebraic topology?",
+            "What are the key ideas in algebraic topology?",
+            "What are the main approaches in algebraic topology?",
+            "What are the main issues of algebraic topology?",
+            "What are the key findings in algebraic topology?"
+        ],
+        "category": "algebraic topology"
+    },
+    {
+        "query": [
+            "What are the main tools in nuclear theory?",
+            "What are the main innovations in nuclear theory?",
+            "What are the main contributions in nuclear theory?",
+            "What are the main uses of nuclear theory?",
+            "What are the key ideas in nuclear theory?"
+        ],
+        "category": "nuclear theory"
+    },
+    {
+        "query": [
+            "What key studies address the challenges in computers and society?",
+            "What are the main algorithms in computers and society?",
+            "Which papers have shaped the understanding of computers and society?",
+            "What are the main applications of computers and society?",
+            "What are the most important concepts in computers and society?"
+        ],
+        "category": "computers and society"
+    },
+    {
+        "query": [
+            "What are the main methods used in robotics?",
+            "What are the main insights in robotics?",
+            "What are the main theories in robotics?",
+            "What are the seminal papers in robotics?",
+            "What are the main tools in robotics?"
+        ],
+        "category": "robotics"
+    },
+    {
+        "query": [
+            "What are the main implications in biology and other natural sciences?",
+            "What are the main tools in biology and other natural sciences?",
+            "What are the main challenges of biology and other natural sciences?",
+            "Which papers have shaped the understanding of biology and other natural sciences?",
+            "What are the main algorithms in biology and other natural sciences?"
+        ],
+        "category": "biology and other natural sciences"
+    },
+    {
+        "query": [
+            "What experimental or theoretical work stands out in mechanics of deformable solids?",
+            "What are the main advantages of mechanics of deformable solids?",
+            "What are the main uses of mechanics of deformable solids?",
+            "What challenges do researchers face in mechanics of deformable solids?",
+            "Can you provide examples of influential work in mechanics of deformable solids?"
+        ],
+        "category": "mechanics of deformable solids"
+    },
+    {
+        "query": [
+            "What are the main insights in instrumentation and methods for astrophysics?",
+            "Which papers have shaped the understanding of instrumentation and methods for astrophysics?",
+            "What are the main findings in instrumentation and methods for astrophysics?",
+            "What are the main approaches in instrumentation and methods for astrophysics?",
+            "What are the main theories in instrumentation and methods for astrophysics?"
+        ],
+        "category": "instrumentation and methods for astrophysics"
+    },
+    {
+        "query": [
+            "What are the main concerns of operator algebras?",
+            "What are the fundamental principles in operator algebras?",
+            "What are the main implications in operator algebras?",
+            "Can you provide an overview of the key concepts in operator algebras?",
+            "What are the most influential studies in operator algebras?"
+        ],
+        "category": "operator algebras"
+    },
+    {
+        "query": [
+            "What are the main challenges of chemical physics?",
+            "What are the main uses of chemical physics?",
+            "What are the main algorithms in chemical physics?",
+            "What are the most important concepts in chemical physics?",
+            "What are the key techniques in chemical physics?"
+        ],
+        "category": "chemical physics"
+    },
+    {
+        "query": [
+            "What are the main limitations of atmospheric and oceanic physics?",
+            "What are the main approaches in atmospheric and oceanic physics?",
+            "What are the fundamental principles in atmospheric and oceanic physics?",
+            "What challenges do researchers face in atmospheric and oceanic physics?",
+            "What are the seminal papers in atmospheric and oceanic physics?"
+        ],
+        "category": "atmospheric and oceanic physics"
+    },
+    {
+        "query": [
+            "What are the most influential studies in biomolecules?",
+            "Which papers have shaped the understanding of biomolecules?",
+            "What are the latest developments in biomolecules as seen in the literature?",
+            "What are the main frameworks in biomolecules?",
+            "What are the main models in biomolecules?"
+        ],
+        "category": "biomolecules"
+    },
+    {
+        "query": [
+            "What are the most important concepts in computational complexity?",
+            "What are the main applications of computational complexity?",
+            "What are the main strategies in computational complexity?",
+            "What are the main developments in computational complexity?",
+            "What are the main uses of computational complexity?"
+        ],
+        "category": "computational complexity"
+    },
+    {
+        "query": [
+            "Which papers have shaped the understanding of computational geometry?",
+            "What are the main models in computational geometry?",
+            "Can you recommend notable case studies in computational geometry?",
+            "Can you provide an overview of the key concepts in computational geometry?",
+            "What are the main systems in computational geometry?"
+        ],
+        "category": "computational geometry"
+    },
+    {
+        "query": [
+            "What are the main benefits of social and information networks?",
+            "What are the seminal papers in social and information networks?",
+            "What are the main uses of social and information networks?",
+            "What are the main insights in social and information networks?",
+            "Can you provide an overview of the key concepts in social and information networks?"
+        ],
+        "category": "social and information networks"
+    },
+    {
+        "query": [
+            "What are the key ideas in probability?",
+            "Can you provide an overview of the key concepts in probability?",
+            "What are the main applications in probability?",
+            "What key studies address the challenges in probability?",
+            "What are the main challenges of probability?"
+        ],
+        "category": "probability"
+    },
+    {
+        "query": [
+            "What are the main problems of probability theory and stochastic processes?",
+            "What are the key techniques in probability theory and stochastic processes?",
+            "What are the main challenges of probability theory and stochastic processes?",
+            "What are the main innovations in probability theory and stochastic processes?",
+            "What are the main concerns of probability theory and stochastic processes?"
+        ],
+        "category": "probability theory and stochastic processes"
+    },
+    {
+        "query": [
+            "What are the main breakthroughs in networking and internet architecture?",
+            "What are the main problems of networking and internet architecture?",
+            "What are the main advances in networking and internet architecture?",
+            "What are the main systems in networking and internet architecture?",
+            "What are the key ideas in networking and internet architecture?"
+        ],
+        "category": "networking and internet architecture"
+    },
+    {
+        "query": [
+            "What are the key findings in partial differential equations?",
+            "What are the main approaches in partial differential equations?",
+            "What are the core concepts in partial differential equations?",
+            "What are the key ideas in partial differential equations?",
+            "Can you provide examples of influential work in partial differential equations?"
+        ],
+        "category": "partial differential equations"
+    },
+    {
+        "query": [
+            "What are the main innovations in statistical mechanics, structure of matter?",
+            "What are the main benefits of statistical mechanics, structure of matter?",
+            "Can you provide an overview of the key concepts in statistical mechanics, structure of matter?",
+            "Can you recommend notable case studies in statistical mechanics, structure of matter?",
+            "Can you provide recent publications on statistical mechanics, structure of matter?"
+        ],
+        "category": "statistical mechanics, structure of matter"
+    },
+    {
+        "query": [
+            "What are the main problems of high energy physics - lattice?",
+            "What are the main approaches in high energy physics - lattice?",
+            "What are the main limitations of high energy physics - lattice?",
+            "What are the main disadvantages of high energy physics - lattice?",
+            "What are the main systems in high energy physics - lattice?"
+        ],
+        "category": "high energy physics - lattice"
+    },
+    {
+        "query": [
+            "Which papers have shaped the understanding of adaptation and self-organizing systems?",
+            "What are the main contributions in adaptation and self-organizing systems?",
+            "What are the main tools in adaptation and self-organizing systems?",
+            "What are the main insights in adaptation and self-organizing systems?",
+            "What are the main advantages of adaptation and self-organizing systems?"
+        ],
+        "category": "adaptation and self-organizing systems"
+    },
+    {
+        "query": [
+            "What are the key techniques in data analysis, statistics and probability?",
+            "What are the main results in data analysis, statistics and probability?",
+            "What are the main findings in data analysis, statistics and probability?",
+            "What are the core concepts in data analysis, statistics and probability?",
+            "What are the main problems of data analysis, statistics and probability?"
+        ],
+        "category": "data analysis, statistics and probability"
+    },
+    {
+        "query": [
+            "What are the main developments in atomic physics?",
+            "What are the main results in atomic physics?",
+            "What challenges do researchers face in atomic physics?",
+            "What are the main architectures in atomic physics?",
+            "What are the main systems in atomic physics?"
+        ],
+        "category": "atomic physics"
+    },
+    {
+        "query": [
+            "Can you provide examples of influential work in plasma physics?",
+            "What are the main advantages of plasma physics?",
+            "What are the main innovations in plasma physics?",
+            "What are the main applications in plasma physics?",
+            "What are the most influential studies in plasma physics?"
+        ],
+        "category": "plasma physics"
+    },
+    {
+        "query": [
+            "What are the main disadvantages of digital libraries?",
+            "What are the main trends in digital libraries?",
+            "What are the main strategies in digital libraries?",
+            "What are the main issues of digital libraries?",
+            "What are the key techniques in digital libraries?"
+        ],
+        "category": "digital libraries"
+    },
+    {
+        "query": [
+            "What are the key findings in data?",
+            "Can you provide examples of influential work in data?",
+            "What are the fundamental principles in data?",
+            "What are the main applications in data?",
+            "What are the main advantages of data?"
+        ],
+        "category": "data"
+    },
+    {
+        "query": [
+            "What are the main challenges of algebraic geometry?",
+            "What are the latest developments in algebraic geometry as seen in the literature?",
+            "What are the main uses of algebraic geometry?",
+            "What are the main theories in algebraic geometry?",
+            "What experimental or theoretical work stands out in algebraic geometry?"
+        ],
+        "category": "algebraic geometry"
+    },
+    {
+        "query": [
+            "What are the main challenges of image processing and computer vison?",
+            "What are the key ideas in image processing and computer vison?",
+            "What are the main insights in image processing and computer vison?",
+            "What are the main systems in image processing and computer vison?",
+            "What are the main advantages of image processing and computer vison?"
+        ],
+        "category": "image processing and computer vison"
+    },
+    {
+        "query": [
+            "What are the main benefits of cosmology and nongalactic astrophysics?",
+            "What are the main frameworks in cosmology and nongalactic astrophysics?",
+            "What are the main algorithms in cosmology and nongalactic astrophysics?",
+            "What are the main problems of cosmology and nongalactic astrophysics?",
+            "What are the main models in cosmology and nongalactic astrophysics?"
+        ],
+        "category": "cosmology and nongalactic astrophysics"
+    },
+    {
+        "query": [
+            "What are the main trends in pattern formation and solitons?",
+            "What are the main applications of pattern formation and solitons?",
+            "What are the main breakthroughs in pattern formation and solitons?",
+            "What are the main issues of pattern formation and solitons?",
+            "What are the main discoveries in pattern formation and solitons?"
+        ],
+        "category": "pattern formation and solitons"
+    },
+    {
+        "query": [
+            "What are the main advances in k-theory and homology?",
+            "What experimental or theoretical work stands out in k-theory and homology?",
+            "Can you provide recent publications on k-theory and homology?",
+            "What are the most important concepts in k-theory and homology?",
+            "What are the main systems in k-theory and homology?"
+        ],
+        "category": "k-theory and homology"
+    },
+    {
+        "query": [
+            "What are the main applications of representation theory?",
+            "What are the main algorithms in representation theory?",
+            "What are the main systems in representation theory?",
+            "What are the main implications in representation theory?",
+            "What are the main innovations in representation theory?"
+        ],
+        "category": "representation theory"
+    },
+    {
+        "query": [
+            "What key studies address the challenges in k-theory?",
+            "What are the main methods used in k-theory?",
+            "What are the latest developments in k-theory as seen in the literature?",
+            "What are the main issues of k-theory?",
+            "What are the main advantages of k-theory?"
+        ],
+        "category": "k-theory"
+    },
+    {
+        "query": [
+            "What are the main limitations of general economics?",
+            "What are the seminal papers in general economics?",
+            "What are the main trends in general economics?",
+            "What are the main strategies in general economics?",
+            "What are the key ideas in general economics?"
+        ],
+        "category": "general economics"
+    },
+    {
+        "query": [
+            "What are the main disadvantages of economics?",
+            "Which papers have shaped the understanding of economics?",
+            "What are the main discoveries in economics?",
+            "Can you provide recent publications on economics?",
+            "What are the main insights in economics?"
+        ],
+        "category": "economics"
+    },
+    {
+        "query": [
+            "What are the main limitations of logic?",
+            "Can you provide recent publications on logic?",
+            "What are the latest developments in logic as seen in the literature?",
+            "What are the main insights in logic?",
+            "What are the main systems in logic?"
+        ],
+        "category": "logic"
+    },
+    {
+        "query": [
+            "What are the main contributions in mathematical logic and foundations?",
+            "What are the main strategies in mathematical logic and foundations?",
+            "What key studies address the challenges in mathematical logic and foundations?",
+            "What are the main applications of mathematical logic and foundations?",
+            "What are the key ideas in mathematical logic and foundations?"
+        ],
+        "category": "mathematical logic and foundations"
+    },
+    {
+        "query": [
+            "What are the main disadvantages of applications of statistics?",
+            "What are the main frameworks in applications of statistics?",
+            "What are the main architectures in applications of statistics?",
+            "What are the main discoveries in applications of statistics?",
+            "What are the main concerns of applications of statistics?"
+        ],
+        "category": "applications of statistics"
+    },
+    {
+        "query": [
+            "What are the main models in statistics?",
+            "What are the main advances in statistics?",
+            "What are the seminal papers in statistics?",
+            "What are the main issues of statistics?",
+            "Can you provide examples of influential work in statistics?"
+        ],
+        "category": "statistics"
+    },
+    {
+        "query": [
+            "What are the main disadvantages of game theory, economics, social and behavioral sciences?",
+            "What are the main advantages of game theory, economics, social and behavioral sciences?",
+            "Can you provide recent publications on game theory, economics, social and behavioral sciences?",
+            "What are the main developments in game theory, economics, social and behavioral sciences?",
+            "What are the main problems of game theory, economics, social and behavioral sciences?"
+        ],
+        "category": "game theory, economics, social and behavioral sciences"
+    },
+    {
+        "query": [
+            "What are the fundamental principles in logic in computer science?",
+            "What are the main results in logic in computer science?",
+            "What are the seminal papers in logic in computer science?",
+            "What are the main applications of logic in computer science?",
+            "Can you provide examples of influential work in logic in computer science?"
+        ],
+        "category": "logic in computer science"
+    },
+    {
+        "query": [
+            "What are the main applications in classical analysis and odes?",
+            "What are the main innovations in classical analysis and odes?",
+            "What are the main limitations of classical analysis and odes?",
+            "Can you provide recent publications on classical analysis and odes?",
+            "What are the fundamental principles in classical analysis and odes?"
+        ],
+        "category": "classical analysis and odes"
+    },
+    {
+        "query": [
+            "What are the main concerns of history and philosophy of physics?",
+            "What are the main implications in history and philosophy of physics?",
+            "What are the main strategies in history and philosophy of physics?",
+            "What are the main benefits of history and philosophy of physics?",
+            "What are the main results in history and philosophy of physics?"
+        ],
+        "category": "history and philosophy of physics"
+    },
+    {
+        "query": [
+            "What key studies address the challenges in statistics theory?",
+            "What are the main uses of statistics theory?",
+            "What are the main implications in statistics theory?",
+            "What are the main breakthroughs in statistics theory?",
+            "What are the main systems in statistics theory?"
+        ],
+        "category": "statistics theory"
+    },
+    {
+        "query": [
+            "What are the main architectures in econometrics?",
+            "Can you provide examples of influential work in econometrics?",
+            "What are the core concepts in econometrics?",
+            "Which papers have shaped the understanding of econometrics?",
+            "What are the main innovations in econometrics?"
+        ],
+        "category": "econometrics"
+    },
+    {
+        "query": [
+            "What are the core concepts in geometric topology?",
+            "What are the main strategies in geometric topology?",
+            "Which papers have shaped the understanding of geometric topology?",
+            "What are the main methods used in geometric topology?",
+            "What are the main applications of geometric topology?"
+        ],
+        "category": "geometric topology"
+    },
+    {
+        "query": [
+            "What key studies address the challenges in group theory?",
+            "What are the main concerns of group theory?",
+            "What are the key findings in group theory?",
+            "What are the main approaches in group theory?",
+            "What are the main findings in group theory?"
+        ],
+        "category": "group theory"
+    },
+    {
+        "query": [
+            "What are the main algorithms in quantum theory?",
+            "What experimental or theoretical work stands out in quantum theory?",
+            "What are the main problems of quantum theory?",
+            "What are the seminal papers in quantum theory?",
+            "What are the key ideas in quantum theory?"
+        ],
+        "category": "quantum theory"
+    },
+    {
+        "query": [
+            "What are the main problems of biological physics?",
+            "What are the main theories in biological physics?",
+            "What are the main systems in biological physics?",
+            "What are the main methods used in biological physics?",
+            "What are the main insights in biological physics?"
+        ],
+        "category": "biological physics"
+    },
+    {
+        "query": [
+            "What are the seminal papers in complex variables?",
+            "Can you provide an overview of the key concepts in complex variables?",
+            "What key studies address the challenges in complex variables?",
+            "What are the main theories in complex variables?",
+            "What are the main applications of complex variables?"
+        ],
+        "category": "complex variables"
+    },
+    {
+        "query": [
+            "Can you recommend notable case studies in several complex variables and analytic spaces?",
+            "What challenges do researchers face in several complex variables and analytic spaces?",
+            "What are the main systems in several complex variables and analytic spaces?",
+            "Can you provide an overview of the key concepts in several complex variables and analytic spaces?",
+            "What are the fundamental principles in several complex variables and analytic spaces?"
+        ],
+        "category": "several complex variables and analytic spaces"
+    },
+    {
+        "query": [
+            "What are the main implications in general finance?",
+            "What are the main benefits of general finance?",
+            "What are the main algorithms in general finance?",
+            "What are the key findings in general finance?",
+            "What are the most important concepts in general finance?"
+        ],
+        "category": "general finance"
+    },
+    {
+        "query": [
+            "What are the main issues of graphics?",
+            "What are the main concerns of graphics?",
+            "Which papers have shaped the understanding of graphics?",
+            "What are the key findings in graphics?",
+            "What are the main trends in graphics?"
+        ],
+        "category": "graphics"
+    },
+    {
+        "query": [
+            "What are the main breakthroughs in commutative rings and algebras?",
+            "What are the main insights in commutative rings and algebras?",
+            "What are the most important concepts in commutative rings and algebras?",
+            "What are the main architectures in commutative rings and algebras?",
+            "What are the main benefits of commutative rings and algebras?"
+        ],
+        "category": "commutative rings and algebras"
+    },
+    {
+        "query": [
+            "What are the main findings in associative rings and algebras?",
+            "What are the seminal papers in associative rings and algebras?",
+            "What are the main contributions in associative rings and algebras?",
+            "What are the main problems of associative rings and algebras?",
+            "What are the main architectures in associative rings and algebras?"
+        ],
+        "category": "associative rings and algebras"
+    },
+    {
+        "query": [
+            "What are the main implications in metric geometry?",
+            "What are the main issues of metric geometry?",
+            "What are the key techniques in metric geometry?",
+            "What are the main benefits of metric geometry?",
+            "What are the main advantages of metric geometry?"
+        ],
+        "category": "metric geometry"
+    },
+    {
+        "query": [
+            "What are the main strategies in convex and discrete geometry?",
+            "What are the main limitations of convex and discrete geometry?",
+            "What are the main applications in convex and discrete geometry?",
+            "What are the main tools in convex and discrete geometry?",
+            "What are the fundamental principles in convex and discrete geometry?"
+        ],
+        "category": "convex and discrete geometry"
+    },
+    {
+        "query": [
+            "What are the main approaches in audio and speech processing?",
+            "What experimental or theoretical work stands out in audio and speech processing?",
+            "What are the main insights in audio and speech processing?",
+            "What are the main architectures in audio and speech processing?",
+            "What are the key ideas in audio and speech processing?"
+        ],
+        "category": "audio and speech processing"
+    },
+    {
+        "query": [
+            "What are the main approaches in sound?",
+            "What are the main concerns of sound?",
+            "What are the key findings in sound?",
+            "What are the main advantages of sound?",
+            "What are the main challenges of sound?"
+        ],
+        "category": "sound"
+    },
+    {
+        "query": [
+            "What are the main breakthroughs in operations research, mathematical programming?",
+            "What are the main insights in operations research, mathematical programming?",
+            "What experimental or theoretical work stands out in operations research, mathematical programming?",
+            "What are the most important concepts in operations research, mathematical programming?",
+            "What are the main problems of operations research, mathematical programming?"
+        ],
+        "category": "operations research, mathematical programming"
+    },
+    {
+        "query": [
+            "What are the main innovations in nuclear experiment?",
+            "What are the main approaches in nuclear experiment?",
+            "What are the fundamental principles in nuclear experiment?",
+            "What are the main models in nuclear experiment?",
+            "What are the main trends in nuclear experiment?"
+        ],
+        "category": "nuclear experiment"
+    },
+    {
+        "query": [
+            "Which papers have shaped the understanding of group theory and generalizations?",
+            "What are the main developments in group theory and generalizations?",
+            "What are the key findings in group theory and generalizations?",
+            "What are the main insights in group theory and generalizations?",
+            "What are the key ideas in group theory and generalizations?"
+        ],
+        "category": "group theory and generalizations"
+    },
+    {
+        "query": [
+            "What are the main insights in quantitative methods?",
+            "What are the most important concepts in quantitative methods?",
+            "What are the main benefits of quantitative methods?",
+            "What are the key techniques in quantitative methods?",
+            "What are the most influential studies in quantitative methods?"
+        ],
+        "category": "quantitative methods"
+    },
+    {
+        "query": [
+            "What are the main breakthroughs in discrete mathematics?",
+            "What are the main disadvantages of discrete mathematics?",
+            "What are the main models in discrete mathematics?",
+            "What are the most influential studies in discrete mathematics?",
+            "What are the main applications in discrete mathematics?"
+        ],
+        "category": "discrete mathematics"
+    },
+    {
+        "query": [
+            "What are the main applications of geometry?",
+            "What are the main challenges of geometry?",
+            "What are the main advantages of geometry?",
+            "What are the main disadvantages of geometry?",
+            "What are the main advances in geometry?"
+        ],
+        "category": "geometry"
+    },
+    {
+        "query": [
+            "Can you provide recent publications on category theory?",
+            "What are the main disadvantages of category theory?",
+            "What are the main approaches in category theory?",
+            "What are the main developments in category theory?",
+            "What are the main methods used in category theory?"
+        ],
+        "category": "category theory"
+    },
+    {
+        "query": [
+            "What are the most influential studies in quantum algebra?",
+            "What are the main issues of quantum algebra?",
+            "What are the main contributions in quantum algebra?",
+            "What are the main discoveries in quantum algebra?",
+            "What are the key findings in quantum algebra?"
+        ],
+        "category": "quantum algebra"
+    },
+    {
+        "query": [
+            "What are the main challenges of calculus of variations and optimal control; optimization?",
+            "Can you provide recent publications on calculus of variations and optimal control; optimization?",
+            "What are the main trends in calculus of variations and optimal control; optimization?",
+            "What are the core concepts in calculus of variations and optimal control; optimization?",
+            "What are the main problems of calculus of variations and optimal control; optimization?"
+        ],
+        "category": "calculus of variations and optimal control; optimization"
+    },
+    {
+        "query": [
+            "What are the main systems in global analysis, analysis on manifolds?",
+            "What are the main advantages of global analysis, analysis on manifolds?",
+            "What are the main architectures in global analysis, analysis on manifolds?",
+            "What are the main concerns of global analysis, analysis on manifolds?",
+            "What are the main implications in global analysis, analysis on manifolds?"
+        ],
+        "category": "global analysis, analysis on manifolds"
+    },
+    {
+        "query": [
+            "Can you provide an overview of the key concepts in populations and evolution?",
+            "What are the main models in populations and evolution?",
+            "What are the most important concepts in populations and evolution?",
+            "What are the main frameworks in populations and evolution?",
+            "Can you recommend notable case studies in populations and evolution?"
+        ],
+        "category": "populations and evolution"
+    },
+    {
+        "query": [
+            "What are the main advantages of risk management?",
+            "What are the key techniques in risk management?",
+            "What are the main theories in risk management?",
+            "What are the main applications in risk management?",
+            "What are the main contributions in risk management?"
+        ],
+        "category": "risk management"
+    },
+    {
+        "query": [
+            "What are the main tools in mathematics of computing?",
+            "What are the main methods used in mathematics of computing?",
+            "What are the key findings in mathematics of computing?",
+            "What are the main frameworks in mathematics of computing?",
+            "What are the main contributions in mathematics of computing?"
+        ],
+        "category": "mathematics of computing"
+    },
+    {
+        "query": [
+            "What are the main benefits of chaotic dynamics?",
+            "Can you provide recent publications on chaotic dynamics?",
+            "What are the main concerns of chaotic dynamics?",
+            "What are the main strategies in chaotic dynamics?",
+            "What are the main approaches in chaotic dynamics?"
+        ],
+        "category": "chaotic dynamics"
+    },
+    {
+        "query": [
+            "What key studies address the challenges in manifolds and cell complexes?",
+            "Which papers have shaped the understanding of manifolds and cell complexes?",
+            "What are the main advantages of manifolds and cell complexes?",
+            "What are the main tools in manifolds and cell complexes?",
+            "What are the main uses of manifolds and cell complexes?"
+        ],
+        "category": "manifolds and cell complexes"
+    },
+    {
+        "query": [
+            "What are the main advances in order, lattices, ordered algebraic structures?",
+            "What are the main methods used in order, lattices, ordered algebraic structures?",
+            "What are the main applications in order, lattices, ordered algebraic structures?",
+            "What are the latest developments in order, lattices, ordered algebraic structures as seen in the literature?",
+            "What are the main breakthroughs in order, lattices, ordered algebraic structures?"
+        ],
+        "category": "order, lattices, ordered algebraic structures"
+    },
+    {
+        "query": [
+            "What are the main limitations of databases?",
+            "Can you provide recent publications on databases?",
+            "What are the main developments in databases?",
+            "What are the main strategies in databases?",
+            "What are the main frameworks in databases?"
+        ],
+        "category": "databases"
+    },
+    {
+        "query": [
+            "What are the latest developments in information systems as seen in the literature?",
+            "Can you recommend notable case studies in information systems?",
+            "What are the main limitations of information systems?",
+            "What are the main tools in information systems?",
+            "What are the main disadvantages of information systems?"
+        ],
+        "category": "information systems"
+    },
+    {
+        "query": [
+            "What are the main applications in optics, electromagnetic theory?",
+            "What are the main concerns of optics, electromagnetic theory?",
+            "What are the main problems of optics, electromagnetic theory?",
+            "What are the main insights in optics, electromagnetic theory?",
+            "What are the core concepts in optics, electromagnetic theory?"
+        ],
+        "category": "optics, electromagnetic theory"
+    },
+    {
+        "query": [
+            "What are the main methods used in measure and integration?",
+            "What are the main innovations in measure and integration?",
+            "What are the main findings in measure and integration?",
+            "What are the most influential studies in measure and integration?",
+            "Can you recommend notable case studies in measure and integration?"
+        ],
+        "category": "measure and integration"
+    },
+    {
+        "query": [
+            "What are the main systems in computing milieux?",
+            "What are the main strategies in computing milieux?",
+            "What experimental or theoretical work stands out in computing milieux?",
+            "What are the seminal papers in computing milieux?",
+            "What are the key techniques in computing milieux?"
+        ],
+        "category": "computing milieux"
+    },
+    {
+        "query": [
+            "What are the main problems of topological groups, lie groups?",
+            "What are the main trends in topological groups, lie groups?",
+            "What are the main discoveries in topological groups, lie groups?",
+            "What are the main advances in topological groups, lie groups?",
+            "What are the main advantages of topological groups, lie groups?"
+        ],
+        "category": "topological groups, lie groups"
+    },
+    {
+        "query": [
+            "What experimental or theoretical work stands out in fluid mechanics?",
+            "What are the main concerns of fluid mechanics?",
+            "What are the main problems of fluid mechanics?",
+            "Which papers have shaped the understanding of fluid mechanics?",
+            "What are the main challenges of fluid mechanics?"
+        ],
+        "category": "fluid mechanics"
+    },
+    {
+        "query": [
+            "What are the main advantages of symplectic geometry?",
+            "What are the main insights in symplectic geometry?",
+            "What are the key techniques in symplectic geometry?",
+            "Can you provide recent publications on symplectic geometry?",
+            "What are the main problems of symplectic geometry?"
+        ],
+        "category": "symplectic geometry"
+    },
+    {
+        "query": [
+            "What are the latest developments in multimedia as seen in the literature?",
+            "What are the main insights in multimedia?",
+            "What challenges do researchers face in multimedia?",
+            "What are the main discoveries in multimedia?",
+            "Can you provide examples of influential work in multimedia?"
+        ],
+        "category": "multimedia"
+    },
+    {
+        "query": [
+            "What are the key techniques in general topology?",
+            "What are the main theories in general topology?",
+            "What are the main applications of general topology?",
+            "What challenges do researchers face in general topology?",
+            "What are the main algorithms in general topology?"
+        ],
+        "category": "general topology"
+    },
+    {
+        "query": [
+            "What are the most important concepts in physics education?",
+            "Can you recommend notable case studies in physics education?",
+            "What are the main advantages of physics education?",
+            "What are the main disadvantages of physics education?",
+            "What are the main theories in physics education?"
+        ],
+        "category": "physics education"
+    },
+    {
+        "query": [
+            "What are the main advantages of theory of computation?",
+            "What are the main concerns of theory of computation?",
+            "What are the main discoveries in theory of computation?",
+            "What are the main developments in theory of computation?",
+            "What are the main applications of theory of computation?"
+        ],
+        "category": "theory of computation"
+    },
+    {
+        "query": [
+            "What challenges do researchers face in history and overview of mathematics?",
+            "What are the main trends in history and overview of mathematics?",
+            "What are the main insights in history and overview of mathematics?",
+            "Can you recommend notable case studies in history and overview of mathematics?",
+            "What are the main applications of history and overview of mathematics?"
+        ],
+        "category": "history and overview of mathematics"
+    },
+    {
+        "query": [
+            "Which papers have shaped the understanding of hardware architecture?",
+            "What are the main challenges of hardware architecture?",
+            "What are the main tools in hardware architecture?",
+            "What are the core concepts in hardware architecture?",
+            "What are the key findings in hardware architecture?"
+        ],
+        "category": "hardware architecture"
+    },
+    {
+        "query": [
+            "What are the latest developments in computation of statistics as seen in the literature?",
+            "What are the main concerns of computation of statistics?",
+            "What are the main frameworks in computation of statistics?",
+            "What are the main tools in computation of statistics?",
+            "What are the main results in computation of statistics?"
+        ],
+        "category": "computation of statistics"
+    },
+    {
+        "query": [
+            "What are the main trends in computational engineering, finance, and science?",
+            "What are the main results in computational engineering, finance, and science?",
+            "What are the main frameworks in computational engineering, finance, and science?",
+            "What are the main uses of computational engineering, finance, and science?",
+            "What are the main insights in computational engineering, finance, and science?"
+        ],
+        "category": "computational engineering, finance, and science"
+    },
+    {
+        "query": [
+            "What are the main applications in emerging technologies?",
+            "What are the key findings in emerging technologies?",
+            "What are the main tools in emerging technologies?",
+            "What are the key techniques in emerging technologies?",
+            "What are the main challenges of emerging technologies?"
+        ],
+        "category": "emerging technologies"
+    },
+    {
+        "query": [
+            "What are the main limitations of astronomy and astrophysics?",
+            "What are the main contributions in astronomy and astrophysics?",
+            "What are the main disadvantages of astronomy and astrophysics?",
+            "What are the main tools in astronomy and astrophysics?",
+            "Can you recommend notable case studies in astronomy and astrophysics?"
+        ],
+        "category": "astronomy and astrophysics"
+    },
+    {
+        "query": [
+            "What are the main architectures in fourier analysis?",
+            "What challenges do researchers face in fourier analysis?",
+            "What are the main applications of fourier analysis?",
+            "What are the main applications in fourier analysis?",
+            "What are the main advantages of fourier analysis?"
+        ],
+        "category": "fourier analysis"
+    },
+    {
+        "query": [
+            "What are the main frameworks in commutative algebra?",
+            "What are the main contributions in commutative algebra?",
+            "What are the main theories in commutative algebra?",
+            "What are the main strategies in commutative algebra?",
+            "What are the core concepts in commutative algebra?"
+        ],
+        "category": "commutative algebra"
+    },
+    {
+        "query": [
+            "What are the core concepts in simulation and modeling?",
+            "What are the main developments in simulation and modeling?",
+            "Can you provide recent publications on simulation and modeling?",
+            "What are the key findings in simulation and modeling?",
+            "Can you provide an overview of the key concepts in simulation and modeling?"
+        ],
+        "category": "simulation and modeling"
+    },
+    {
+        "query": [
+            "What are the main issues of integral equations?",
+            "What are the seminal papers in integral equations?",
+            "What are the main challenges of integral equations?",
+            "What are the main problems of integral equations?",
+            "What are the most important concepts in integral equations?"
+        ],
+        "category": "integral equations"
+    },
+    {
+        "query": [
+            "What are the main frameworks in genomics?",
+            "What are the main algorithms in genomics?",
+            "What are the main strategies in genomics?",
+            "Can you recommend notable case studies in genomics?",
+            "What are the main breakthroughs in genomics?"
+        ],
+        "category": "genomics"
+    },
+    {
+        "query": [
+            "What are the main limitations of computer applications?",
+            "What are the main frameworks in computer applications?",
+            "What are the main issues of computer applications?",
+            "What are the main challenges of computer applications?",
+            "What are the main uses of computer applications?"
+        ],
+        "category": "computer applications"
+    },
+    {
+        "query": [
+            "What are the main applications of special functions?",
+            "What are the main systems in special functions?",
+            "What are the main innovations in special functions?",
+            "What are the main architectures in special functions?",
+            "What are the main frameworks in special functions?"
+        ],
+        "category": "special functions"
+    },
+    {
+        "query": [
+            "Can you provide an overview of the key concepts in theoretical economics?",
+            "Can you recommend notable case studies in theoretical economics?",
+            "What are the main applications of theoretical economics?",
+            "What are the most important concepts in theoretical economics?",
+            "What are the main issues of theoretical economics?"
+        ],
+        "category": "theoretical economics"
+    },
+    {
+        "query": [
+            "What are the main breakthroughs in space physics?",
+            "What are the fundamental principles in space physics?",
+            "What are the most influential studies in space physics?",
+            "What are the main innovations in space physics?",
+            "What are the main benefits of space physics?"
+        ],
+        "category": "space physics"
+    },
+    {
+        "query": [
+            "What are the main approaches in functions of a complex variable?",
+            "What are the main advantages of functions of a complex variable?",
+            "What are the main challenges of functions of a complex variable?",
+            "What are the main frameworks in functions of a complex variable?",
+            "What are the main tools in functions of a complex variable?"
+        ],
+        "category": "functions of a complex variable"
+    },
+    {
+        "query": [
+            "What are the main contributions in potential theory?",
+            "Can you provide examples of influential work in potential theory?",
+            "What are the main advances in potential theory?",
+            "What are the main discoveries in potential theory?",
+            "What are the main implications in potential theory?"
+        ],
+        "category": "potential theory"
+    },
+    {
+        "query": [
+            "What are the main algorithms in difference and functional equations?",
+            "What are the most important concepts in difference and functional equations?",
+            "What are the main strategies in difference and functional equations?",
+            "What are the most influential studies in difference and functional equations?",
+            "What experimental or theoretical work stands out in difference and functional equations?"
+        ],
+        "category": "difference and functional equations"
+    },
+    {
+        "query": [
+            "What are the main architectures in algorithms?",
+            "What are the main approaches in algorithms?",
+            "Can you provide examples of influential work in algorithms?",
+            "What are the main applications in algorithms?",
+            "What challenges do researchers face in algorithms?"
+        ],
+        "category": "algorithms"
+    },
+    {
+        "query": [
+            "Can you recommend notable case studies in abstract harmonic analysis?",
+            "What key studies address the challenges in abstract harmonic analysis?",
+            "What are the main developments in abstract harmonic analysis?",
+            "What are the key findings in abstract harmonic analysis?",
+            "What are the main implications in abstract harmonic analysis?"
+        ],
+        "category": "abstract harmonic analysis"
+    },
+    {
+        "query": [
+            "What are the key techniques in computer systems organization?",
+            "What are the main concerns of computer systems organization?",
+            "What experimental or theoretical work stands out in computer systems organization?",
+            "What are the key findings in computer systems organization?",
+            "What are the main challenges of computer systems organization?"
+        ],
+        "category": "computer systems organization"
+    },
+    {
+        "query": [
+            "What are the main theories in molecular networks?",
+            "What are the main implications in molecular networks?",
+            "What are the main findings in molecular networks?",
+            "What are the key techniques in molecular networks?",
+            "What are the key ideas in molecular networks?"
+        ],
+        "category": "molecular networks"
+    },
+    {
+        "query": [
+            "Can you recommend notable case studies in accelerator physics?",
+            "What are the key ideas in accelerator physics?",
+            "What are the most important concepts in accelerator physics?",
+            "Can you provide an overview of the key concepts in accelerator physics?",
+            "What are the main results in accelerator physics?"
+        ],
+        "category": "accelerator physics"
+    },
+    {
+        "query": [
+            "What are the main theories in trading and market microstructure?",
+            "What are the main implications in trading and market microstructure?",
+            "What are the main architectures in trading and market microstructure?",
+            "What are the main frameworks in trading and market microstructure?",
+            "Can you recommend notable case studies in trading and market microstructure?"
+        ],
+        "category": "trading and market microstructure"
+    },
+    {
+        "query": [
+            "What are the fundamental principles in mathematical finance?",
+            "What are the main approaches in mathematical finance?",
+            "What are the most influential studies in mathematical finance?",
+            "What are the main problems of mathematical finance?",
+            "What are the key ideas in mathematical finance?"
+        ],
+        "category": "mathematical finance"
+    },
+    {
+        "query": [
+            "What are the main models in pricing of securities?",
+            "What are the main approaches in pricing of securities?",
+            "What are the seminal papers in pricing of securities?",
+            "What are the main problems of pricing of securities?",
+            "What are the main results in pricing of securities?"
+        ],
+        "category": "pricing of securities"
+    },
+    {
+        "query": [
+            "What are the main applications in statistical finance?",
+            "What are the main breakthroughs in statistical finance?",
+            "What are the main insights in statistical finance?",
+            "What are the main problems of statistical finance?",
+            "What are the main concerns of statistical finance?"
+        ],
+        "category": "statistical finance"
+    },
+    {
+        "query": [
+            "What are the main trends in linear and multilinear algebra; matrix theory?",
+            "What are the main benefits of linear and multilinear algebra; matrix theory?",
+            "What are the main innovations in linear and multilinear algebra; matrix theory?",
+            "What are the main limitations of linear and multilinear algebra; matrix theory?",
+            "What are the main discoveries in linear and multilinear algebra; matrix theory?"
+        ],
+        "category": "linear and multilinear algebra; matrix theory"
+    },
+    {
+        "query": [
+            "What are the main insights in real functions?",
+            "What are the fundamental principles in real functions?",
+            "What are the main limitations of real functions?",
+            "What are the main applications of real functions?",
+            "What are the main innovations in real functions?"
+        ],
+        "category": "real functions"
+    },
+    {
+        "query": [
+            "Can you provide recent publications on systems theory; control?",
+            "What experimental or theoretical work stands out in systems theory; control?",
+            "Which papers have shaped the understanding of systems theory; control?",
+            "Can you provide an overview of the key concepts in systems theory; control?",
+            "What are the main limitations of systems theory; control?"
+        ],
+        "category": "systems theory; control"
+    },
+    {
+        "query": [
+            "What are the main applications in tissues and organs?",
+            "What are the key findings in tissues and organs?",
+            "What are the main architectures in tissues and organs?",
+            "What are the most important concepts in tissues and organs?",
+            "Can you recommend notable case studies in tissues and organs?"
+        ],
+        "category": "tissues and organs"
+    },
+    {
+        "query": [
+            "What are the main uses of atomic and molecular clusters?",
+            "What are the main architectures in atomic and molecular clusters?",
+            "What are the main developments in atomic and molecular clusters?",
+            "What are the fundamental principles in atomic and molecular clusters?",
+            "What are the main trends in atomic and molecular clusters?"
+        ],
+        "category": "atomic and molecular clusters"
+    },
+    {
+        "query": [
+            "What are the main concerns of computational finance?",
+            "What are the main disadvantages of computational finance?",
+            "What are the main developments in computational finance?",
+            "What key studies address the challenges in computational finance?",
+            "What are the main algorithms in computational finance?"
+        ],
+        "category": "computational finance"
+    },
+    {
+        "query": [
+            "What are the main architectures in computing methodologies and applications?",
+            "What are the main innovations in computing methodologies and applications?",
+            "What are the main breakthroughs in computing methodologies and applications?",
+            "What are the main findings in computing methodologies and applications?",
+            "What are the main results in computing methodologies and applications?"
+        ],
+        "category": "computing methodologies and applications"
+    },
+    {
+        "query": [
+            "What are the main issues of field theory and polynomials?",
+            "What are the main theories in field theory and polynomials?",
+            "What are the main systems in field theory and polynomials?",
+            "What are the main methods used in field theory and polynomials?",
+            "Can you recommend notable case studies in field theory and polynomials?"
+        ],
+        "category": "field theory and polynomials"
+    },
+    {
+        "query": [
+            "What are the main limitations of cellular automata and lattice gases?",
+            "What are the main results in cellular automata and lattice gases?",
+            "What are the main applications in cellular automata and lattice gases?",
+            "What are the main issues of cellular automata and lattice gases?",
+            "Can you recommend notable case studies in cellular automata and lattice gases?"
+        ],
+        "category": "cellular automata and lattice gases"
+    },
+    {
+        "query": [
+            "What are the key ideas in relativity and gravitational theory?",
+            "What are the core concepts in relativity and gravitational theory?",
+            "What are the main architectures in relativity and gravitational theory?",
+            "What are the main systems in relativity and gravitational theory?",
+            "What are the main approaches in relativity and gravitational theory?"
+        ],
+        "category": "relativity and gravitational theory"
+    },
+    {
+        "query": [
+            "What key studies address the challenges in computer system organization?",
+            "What are the latest developments in computer system organization as seen in the literature?",
+            "What are the main methods used in computer system organization?",
+            "Which papers have shaped the understanding of computer system organization?",
+            "What are the main advantages of computer system organization?"
+        ],
+        "category": "computer system organization"
+    },
+    {
+        "query": [
+            "What are the most important concepts in approximations and expansions?",
+            "What are the key ideas in approximations and expansions?",
+            "What are the main innovations in approximations and expansions?",
+            "What are the fundamental principles in approximations and expansions?",
+            "What are the main applications in approximations and expansions?"
+        ],
+        "category": "approximations and expansions"
+    },
+    {
+        "query": [
+            "What are the key findings in computer graphics?",
+            "What are the main strategies in computer graphics?",
+            "What are the main issues of computer graphics?",
+            "What are the latest developments in computer graphics as seen in the literature?",
+            "What are the main architectures in computer graphics?"
+        ],
+        "category": "computer graphics"
+    },
+    {
+        "query": [
+            "What are the main architectures in pattern recognition?",
+            "What are the main strategies in pattern recognition?",
+            "What are the main problems of pattern recognition?",
+            "What are the main applications in pattern recognition?",
+            "What are the main implications in pattern recognition?"
+        ],
+        "category": "pattern recognition"
+    },
+    {
+        "query": [
+            "What are the main architectures in information and communication, circuits?",
+            "Which papers have shaped the understanding of information and communication, circuits?",
+            "What are the main contributions in information and communication, circuits?",
+            "What are the main advances in information and communication, circuits?",
+            "What are the most important concepts in information and communication, circuits?"
+        ],
+        "category": "information and communication, circuits"
+    },
+    {
+        "query": [
+            "What are the main architectures in cell behavior?",
+            "What are the main issues of cell behavior?",
+            "What are the main benefits of cell behavior?",
+            "What are the main advantages of cell behavior?",
+            "What are the key techniques in cell behavior?"
+        ],
+        "category": "cell behavior"
+    },
+    {
+        "query": [
+            "Which papers have shaped the understanding of theory of data?",
+            "What key studies address the challenges in theory of data?",
+            "What are the main trends in theory of data?",
+            "Can you provide an overview of the key concepts in theory of data?",
+            "What are the main breakthroughs in theory of data?"
+        ],
+        "category": "theory of data"
+    },
+    {
+        "query": [
+            "What are the most important concepts in operating systems?",
+            "Can you provide an overview of the key concepts in operating systems?",
+            "What are the main algorithms in operating systems?",
+            "What are the main developments in operating systems?",
+            "What are the main challenges of operating systems?"
+        ],
+        "category": "operating systems"
+    },
+    {
+        "query": [
+            "What are the main trends in general algebraic systems?",
+            "What are the main concerns of general algebraic systems?",
+            "What are the key ideas in general algebraic systems?",
+            "What are the main theories in general algebraic systems?",
+            "What are the main limitations of general algebraic systems?"
+        ],
+        "category": "general algebraic systems"
+    },
+    {
+        "query": [
+            "What are the most important concepts in introductory and survey?",
+            "What are the core concepts in introductory and survey?",
+            "What are the main advantages of introductory and survey?",
+            "What are the main applications of introductory and survey?",
+            "What are the main implications in introductory and survey?"
+        ],
+        "category": "introductory and survey"
+    },
+    {
+        "query": [
+            "What are the key findings in integral transforms, operational calculus?",
+            "What are the main applications of integral transforms, operational calculus?",
+            "What are the main uses of integral transforms, operational calculus?",
+            "What are the main limitations of integral transforms, operational calculus?",
+            "What are the seminal papers in integral transforms, operational calculus?"
+        ],
+        "category": "integral transforms, operational calculus"
+    },
+    {
+        "query": [
+            "What are the main advantages of hardware?",
+            "What are the main uses of hardware?",
+            "What are the main implications in hardware?",
+            "What are the seminal papers in hardware?",
+            "What are the main insights in hardware?"
+        ],
+        "category": "hardware"
+    },
+    {
+        "query": [
+            "What are the main limitations of subcellular processes?",
+            "What are the most influential studies in subcellular processes?",
+            "What are the main findings in subcellular processes?",
+            "What are the main applications in subcellular processes?",
+            "What are the main challenges of subcellular processes?"
+        ],
+        "category": "subcellular processes"
+    },
+    {
+        "query": [
+            "Can you provide recent publications on general literature in mathematics?",
+            "What are the key ideas in general literature in mathematics?",
+            "What are the main tools in general literature in mathematics?",
+            "What are the main theories in general literature in mathematics?",
+            "Can you recommend notable case studies in general literature in mathematics?"
+        ],
+        "category": "general literature in mathematics"
+    },
+    {
+        "query": [
+            "What are the latest developments in sequences, series, summability as seen in the literature?",
+            "What are the key techniques in sequences, series, summability?",
+            "What are the main methods used in sequences, series, summability?",
+            "What are the main benefits of sequences, series, summability?",
+            "What are the main models in sequences, series, summability?"
+        ],
+        "category": "sequences, series, summability"
+    },
+    {
+        "query": [
+            "What are the main models in history of mathematics and mathematicians?",
+            "Can you provide recent publications on history of mathematics and mathematicians?",
+            "What are the main concerns of history of mathematics and mathematicians?",
+            "What are the key findings in history of mathematics and mathematicians?",
+            "What are the seminal papers in history of mathematics and mathematicians?"
+        ],
+        "category": "history of mathematics and mathematicians"
+    },
+    {
+        "query": [
+            "What are the main methods used in mathematics education?",
+            "What are the main insights in mathematics education?",
+            "What are the main developments in mathematics education?",
+            "What are the main findings in mathematics education?",
+            "What are the main tools in mathematics education?"
+        ],
+        "category": "mathematics education"
+    },
+    {
+        "query": [
+            "What are the main results in document and text processing?",
+            "What are the main tools in document and text processing?",
+            "What challenges do researchers face in document and text processing?",
+            "Can you provide recent publications on document and text processing?",
+            "What are the main limitations of document and text processing?"
+        ],
+        "category": "document and text processing"
+    },
+    {
+        "query": [
+            "What are the main insights in portfolio management?",
+            "What are the main developments in portfolio management?",
+            "What challenges do researchers face in portfolio management?",
+            "What are the main discoveries in portfolio management?",
+            "Can you provide an overview of the key concepts in portfolio management?"
+        ],
+        "category": "portfolio management"
+    },
+    {
+        "query": [
+            "What are the main concerns of general literature?",
+            "What are the main contributions in general literature?",
+            "What challenges do researchers face in general literature?",
+            "What are the main frameworks in general literature?",
+            "What are the main discoveries in general literature?"
+        ],
+        "category": "general literature"
+    },
+    {
+        "query": [
+            "What are the main contributions in classical thermodynamics, heat transfer?",
+            "What are the main innovations in classical thermodynamics, heat transfer?",
+            "What are the most influential studies in classical thermodynamics, heat transfer?",
+            "Which papers have shaped the understanding of classical thermodynamics, heat transfer?",
+            "Can you provide recent publications on classical thermodynamics, heat transfer?"
+        ],
+        "category": "classical thermodynamics, heat transfer"
+    }
+]
