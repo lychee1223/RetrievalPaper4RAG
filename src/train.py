@@ -16,7 +16,7 @@ class Experiment:
         実験の初期化
         """
         self.args = args
-        self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+        self.device = torch.device(f'cuda:{self.args.device}' if torch.cuda.is_available() else 'cpu')
 
         # モデルと最適化
         self.model = model.ContrastiveModel(self.args.model_name).to(self.device)
@@ -87,6 +87,7 @@ class Experiment:
 
             # 検証フェーズ
             loss, _, _ = self.evaluate(self.valid_dataloader)
+            print(f"Valid Loss: {loss:.4f}")
         
             if loss < self.best_valid_loss:
                 self.best_valid_loss = loss
@@ -106,7 +107,7 @@ class Experiment:
 
         total_loss = 0.0
 
-        top_k = [10, 30, 50, 100]
+        top_k = [100, 500, 1000, len(self.paper_df)]
         recall_k = {k: 0.0 for k in top_k}
         ndcg_k = {k: 0.0 for k in top_k}
         map = 0.0
@@ -185,17 +186,19 @@ class Experiment:
         実験の実行
         """
         print("Starting training...")
-        self.train()
+        # self.train()
         print("Starting testing...")
         # 重みをロードしてテストする場合は以下のコメントアウトを外す
-        # self.model = ContrastiveModel(self.args.model_name).to(self.device)
-        # self.model.load_state_dict(torch.load(os.path.join(self.args.save_path, "best_model.pth")))
-        _, _ = self.evaluate(self.test_dataloader)
+        self.model = model.ContrastiveModel(self.args.model_name).to(self.device)
+        self.model.load_state_dict(torch.load(os.path.join(self.args.save_path, "best_model.pth")))
+        loss, _, _ = self.evaluate(self.test_dataloader)
+        print(f"Test Loss: {loss:.4f}")
 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Contrastive Learning Training, Validation, and Test")
     parser.add_argument("--seed", type=int, default=42, help="Seed")
+    parser.add_argument("--device", type=int, default=0, help="GPU ID to use")
     parser.add_argument("--paper_path", type=str, required=True, help="Path to paper dataset JSON")
     parser.add_argument("--train_query_path", type=str, required=True, help="Path to train dataset JSON")
     parser.add_argument("--valid_query_path", type=str, required=True, help="Path to validation dataset JSON")

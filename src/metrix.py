@@ -20,7 +20,7 @@ def ndcg_at_k(preds: list[int], GT: list[int], k: int) -> float:
     :return: nDCG@k
     """
     dcg = sum([
-        1.0 / np.log2(rank + 2) for rank in preds[:k] if rank in GT
+        1.0 / np.log2(i + 2) for i, pred in enumerate(preds[:k]) if pred in GT
     ])
     idcg = sum([
         1.0 / np.log2(i + 2) for i in range(min(len(GT), k))
