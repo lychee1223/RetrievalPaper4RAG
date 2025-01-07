@@ -186,11 +186,11 @@ class Experiment:
         実験の実行
         """
         print("Starting training...")
-        # self.train()
+        self.train()
         print("Starting testing...")
-        # 重みをロードしてテストする場合は以下のコメントアウトを外す
-        self.model = model.ContrastiveModel(self.args.model_name).to(self.device)
-        self.model.load_state_dict(torch.load(os.path.join(self.args.save_path, "best_model.pth")))
+        # # 重みをロードしてテストする場合は以下のコメントアウトを外す
+        # self.model = model.ContrastiveModel(self.args.model_name).to(self.device)
+        # self.model.load_state_dict(torch.load(os.path.join(self.args.save_path, "best_model.pth")))
         loss, _, _ = self.evaluate(self.test_dataloader)
         print(f"Test Loss: {loss:.4f}")
 
