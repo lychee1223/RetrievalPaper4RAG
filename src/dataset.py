@@ -49,3 +49,47 @@ class ContrastiveDataset(Dataset):
             "abst_attention_mask": abst_enc["attention_mask"].squeeze(0),
             "category": category
         }
+
+# コピペ from https://github.com/IyatomiLab/Abst2GA_with_LongCLIP/blob/main/src/custom_dataset.py
+class DomainConsistentBatchSampler(Sampler):
+    def __init__(self, data_source, subjects, batch_size):
+        self.data_source = data_source
+        self.subjects = subjects
+        self.batch_size = batch_size
+
+        # 研究分野ごとにインデックスを分類
+        self.subject2idx = defaultdict(list)
+        for idx, subject in enumerate(self.subjects):
+            self.subject2idx[subject].append(idx)
+
+    def __iter__(self) -> Iterator[int]:
+        # バッチサイズ個分の研究分野から一つずつ取ってくる
+
+        # ランダムな分野をまず1個選択
+        # →その分野から1個持ってくる
+        # →重複しない分野をバッチサイズ-1個ランダムに選択
+        # →TF-IDFが高いやつを1個ずつ持ってくる
+
+
+        # shuffled_idxs = []
+        # for subject, idxs in self.subject2idx.items():
+        #     random.shuffle(idxs)
+        #     # バッチサイズの整数倍になるように調整
+        #     if len(idxs) % self.batch_size != 0:
+        #         remainder = self.batch_size - (len(idxs) % self.batch_size)
+        #         idxs.extend(random.choices(range(len(self.data_source)), k=remainder))
+        #     shuffled_idxs.extend(idxs)
+        
+        # # シャッフルされたインデックスをバッチごとにグループ化する
+        # batches = [
+        #     shuffled_idxs[i:i + self.batch_size]
+        #     for i in range(0, len(shuffled_idxs), self.batch_size)
+        # ]
+        # random.shuffle(batches)
+
+        # # インデックスを1つずつ返す
+        # all_idx = [i for batch in batches for i in batch]
+        # yield from all_idx
+
+    def __len__(self):
+        return len(self.data_source)
