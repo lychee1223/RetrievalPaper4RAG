@@ -10,11 +10,14 @@ class ContrastiveModel(nn.Module):
         """
         super(ContrastiveModel, self).__init__()
         # self.bert = BertModel.from_pretrained(model_name)
+        # self.linear = nn.Linear(self.bert.config.hidden_size, 256)
+        
         self.bert = SentenceTransformer(model_name)
-        self.linear = nn.Linear(self.bert.config.hidden_size, 256)
+        self.linear = nn.Linear(self.bert.get_sentence_embedding_dimension(), 256)
+
 
     # def forward(self, input_ids, attention_mask):
-    def forward(self, sentences):
+    def forward(self, sentences, device):
         """
         埋め込みを生成
         :param input_ids: トークナイズされた入力
@@ -22,7 +25,7 @@ class ContrastiveModel(nn.Module):
         :return: 埋め込みベクトル
         """
         
-        return self.bert.encode(sentences, convert_to_tensor=True)
+        return self.bert.encode(sentences, convert_to_tensor=True, device=device)
         
         # outputs = self.bert(input_ids=input_ids, attention_mask=attention_mask)
         # pooled_output = outputs.pooler_output

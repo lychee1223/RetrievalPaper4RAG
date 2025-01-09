@@ -10,13 +10,13 @@ TRAIN_QUERY_PATH=dataset/train_query.json
 VALID_QUERY_PATH=dataset/valid_query.json
 TEST_QUERY_PATH=dataset/test_query.json
 SAVE_PATH=checkpoint/
-MODEL_NAME=google-bert/bert-base-uncased
-EPOCHS=5
-BATCH_SIZE=1
-LEARNING_RATE=1e-1
+MODEL_NAME=sentence-transformers/all-MiniLM-L6-v2
+EPOCHS=64
+BATCH_SIZE=64
+LEARNING_RATE=1e-3
 MAX_LEN=512
 TEMPERATURE=0.07 
-IS_USING_MY_SAMLER=True
+IS_USING_MY_SAMLER=False
 
 CMD="poetry run python src/train.py \
     --seed $SEED \

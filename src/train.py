@@ -23,6 +23,7 @@ class Experiment:
         self.model = model.ContrastiveModel(self.args.model_name).to(self.device)
         self.tokenizer = BertTokenizer.from_pretrained(self.args.model_name)
         self.optimizer = torch.optim.AdamW(self.model.parameters(), lr=self.args.learning_rate)
+        self.logit_scale = np.log(1 / self.args.temperature)
         self.best_valid_loss = float('inf')
 
         # データセットの準備
@@ -34,14 +35,18 @@ class Experiment:
         train_query_df = train_query_df.explode("query").reset_index(drop=True)
         valid_query_df = valid_query_df.explode("query").reset_index(drop=True)
         test_query_df = test_query_df.explode("query").reset_index(drop=True)
-
-        train_dataset = dataset.TrainDataset(train_query_df, self.paper_df, self.tokenizer, self.args.max_len)
-        # train_dataset = dataset.ContrastiveDataset(train_query_df, self.paper_df, self.tokenizer, self.args.max_len)
-        val_dataset = dataset.ContrastiveDataset(valid_query_df, self.paper_df, self.tokenizer, self.args.max_len)
-        test_dataset = dataset.ContrastiveDataset(test_query_df, self.paper_df, self.tokenizer, self.args.max_len)
         
-        self.train_dataloader = DataLoader(train_dataset, batch_size=self.args.batch_size, shuffle=True)
+        if self.args.is_using_my_sampler:
+            train_dataset = dataset.TrainDataset(train_query_df, self.paper_df, batch_size=self.args.batch_size)
+            self.train_dataloader = DataLoader(train_dataset, batch_size=1, shuffle=True, collate_fn=dataset.custom_train_collate_fn)
+        else:
+            train_dataset = dataset.ContrastiveDataset(train_query_df, self.paper_df)
+            self.train_dataloader = DataLoader(train_dataset, batch_size=self.args.batch_size, shuffle=True, collate_fn=dataset.custom_collate_fn)
+
+        val_dataset = dataset.ContrastiveDataset(valid_query_df, self.paper_df)         
         self.valid_dataloader = DataLoader(val_dataset, batch_size=self.args.batch_size, shuffle=False)
+        
+        test_dataset = dataset.ContrastiveDataset(test_query_df, self.paper_df) 
         self.test_dataloader = DataLoader(test_dataset, batch_size=self.args.batch_size, shuffle=False)
 
         # 保存先のディレクトリを作成
@@ -66,26 +71,22 @@ class Experiment:
 
             for batch in tqdm(self.train_dataloader, desc=f"Epoch {epoch+1}/{self.args.epochs}"):
                 # breakpoint()
-                query_input_ids = batch["query_input_ids"].to(self.device)
-                query_attention_mask = batch["query_attention_mask"].to(self.device)
-                abst_input_ids = batch["abst_input_ids"].to(self.device)
-                abst_attention_mask = batch["abst_attention_mask"].to(self.device)
                 if self.args.is_using_my_sampler:
-                    query_input_ids = query_input_ids.squeeze(0)
-                    query_attention_mask = query_attention_mask.squeeze(0)
-                    abst_input_ids = abst_input_ids.squeeze(0)
-                    abst_attention_mask = abst_attention_mask.squeeze(0)
-                    
-
+                    query = batch["query"]
+                    abst = batch["abst"]
+                    category = batch["category"]
+                else:
+                    query = batch[0]
+                    abst = batch[1]
+                    category = batch[2] 
                 # Forward
                 # query_embed = self.model(query_input_ids, query_attention_mask)
                 # abst_embed = self.model(abst_input_ids, abst_attention_mask)
-                
-                query_embed = self.bert(query_input_ids, query_attention_mask)[0]
-                abst_embed = self.bert(abst_input_ids, abst_attention_mask)[0]
+                query_embed = self.model(query, self.device).to(self.device)
+                abst_embed = self.model(abst, self.device).to(self.device)
 
                 # 対照損失を計算
-                loss, _, _ = loss_functions.contrastive_loss(query_embed, abst_embed, 1/self.args.temperature, self.device)
+                loss, _, _ = loss_functions.contrastive_loss(query_embed, abst_embed, self.logit_scale, self.device)
 
                 # Backward
                 self.optimizer.zero_grad()
@@ -95,7 +96,7 @@ class Experiment:
                 total_loss += loss.item()
 
             avg_loss = total_loss / len(self.train_dataloader)
-            print(f"Train Loss: {avg_loss:.4f}")
+            (f"Train Loss: {avg_loss:.4f}")
 
             # 検証フェーズ
             loss, _, _ = self.evaluate(self.valid_dataloader)
@@ -119,8 +120,9 @@ class Experiment:
 
         total_loss = 0.0
 
-        top_k = [100, 500, 1000, len(self.paper_df)]
+        top_k = [10, 50, 100, 200, 500, 1000, len(self.paper_df)]
         recall_k = {k: 0.0 for k in top_k}
+        presicion_k = {k: 0.0 for k in top_k}
         ndcg_k = {k: 0.0 for k in top_k}
         map = 0.0
         mrr = 0.0
@@ -132,49 +134,46 @@ class Experiment:
 
         for i in tqdm(range(0, len(absts), batch_size), desc="Abst Eembed"):
             abst = absts[i:i + batch_size]
-            abst_enc = self.tokenizer(
-                abst, truncation=True, max_length=self.args.max_len, padding="max_length", return_tensors="pt"
-            )
-            abst_input_ids = abst_enc["input_ids"].to(self.device)
-            abst_attention_mask = abst_enc["attention_mask"].to(self.device)
-            abst_embed = self.model(abst_input_ids, abst_attention_mask)
+            abst_embed = self.model(abst, self.device)
             abst_embeds.append(abst_embed.cpu().numpy())
 
         abst_embeds = np.concatenate(abst_embeds, axis=0)
 
         # 各クエリで論文を検索
         for batch in tqdm(dataloader, desc=f"Test"):
-            query_input_ids = batch["query_input_ids"].to(self.device)
-            query_attention_mask = batch["query_attention_mask"].to(self.device)
-            abst_input_ids = batch["abst_input_ids"].to(self.device)
-            abst_attention_mask = batch["abst_attention_mask"].to(self.device)
-            query_categories = batch["category"]
+
+            query = batch[0]
+            abst = batch[1]
+            categories = batch[2] 
 
             # Forward
-            query_embed = self.model(query_input_ids, query_attention_mask)
-            abst_embed = self.model(abst_input_ids, abst_attention_mask)
+            # query_embed = self.model(query_input_ids, query_attention_mask)
+            # abst_embed = self.model(abst_input_ids, abst_attention_mask)
+            query_embeds = self.model(query, self.device).to(self.device)
+            abst_embed = self.model(abst, self.device).to(self.device)
 
             # 対照損失を計算
-            loss, _, _ = loss_functions.contrastive_loss(query_embed, abst_embed, 1/self.args.temperature, self.device)
+            loss, _, _ = loss_functions.contrastive_loss(query_embeds, abst_embed, self.logit_scale, self.device)
             total_loss += loss.item()
 
-            # 各クエリにを評価
-            for i, query_embed in enumerate(query_embed):
-                query_category = query_categories[i]
+            # sim(query, abst)を計算
+            for i, query_embed in enumerate(query_embeds):
+                category = categories[i]
 
-                # 類似度を計算
+                # sim(query, abst)を計算
                 sim_query2abst = np.dot(abst_embeds, query_embed.cpu().numpy())
                 preds = np.argsort(sim_query2abst)[::-1]
 
                 # 同カテゴリの論文をGTとする
                 GT = [
-                    idx for idx, category in enumerate(self.paper_df["categories"])
-                    if query_category in category
+                    i for i, c in enumerate(self.paper_df["categories"])
+                    if category in c
                 ]
-
+                
                 # Top-kの評価指標を計算
                 for k in top_k:
                     recall_k[k] += metrix.recall_at_k(preds, GT, k)
+                    presicion_k[k] += metrix.precision_at_k(preds, GT, k)
                     ndcg_k[k] += metrix.ndcg_at_k(preds, GT, k)
                 
                 map += metrix.map(preds, GT)
@@ -183,8 +182,9 @@ class Experiment:
         # 評価指標を計算
         for k in top_k:
             recall_k[k] /= len(dataloader.dataset)
+            presicion_k[k] /= len(dataloader.dataset)
             ndcg_k[k] /= len(dataloader.dataset)
-            print(f"Recall@{k}: {recall_k[k]:.4f}, nDCG@{k}: {ndcg_k[k]:.4f}")
+            print(f"Recall@{k}: {recall_k[k]:.4f}, Precision@{k}: {presicion_k[k]:.4f}, nDCG@{k}: {ndcg_k[k]:.4f}")
         map /= len(dataloader.dataset)
         mrr /= len(dataloader.dataset)
         print(f"mAP: {map:.4f}, MRR: {mrr:.4f}")

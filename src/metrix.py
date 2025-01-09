@@ -9,7 +9,7 @@ def recall_at_k(preds: list[int], GT: list[int], k: int) -> float:
     :return: Recall@k
     """
     relevant = len(set(preds[:k]) & set(GT))
-    return relevant / min(len(GT), k) if len(GT) > 0 else 0
+    return relevant / len(GT) if len(GT) > 0 else 0
 
 def ndcg_at_k(preds: list[int], GT: list[int], k: int) -> float:
     """
@@ -26,6 +26,16 @@ def ndcg_at_k(preds: list[int], GT: list[int], k: int) -> float:
         1.0 / np.log2(i + 2) for i in range(min(len(GT), k))
     ])
     return dcg / idcg if idcg > 0 else 0
+
+def precision_at_k(preds: list[int], GT: list[int], k: int) -> float:
+    """
+    Precision@kを計算する
+    :param preds: 予測結果
+    :param GT: 正解
+    :param k: k
+    :return: Precision@k
+    """
+    return len(set(preds[:k]) & set(GT)) / k
 
 def map(preds: list[int], GT: list[int]) -> float:
     """
