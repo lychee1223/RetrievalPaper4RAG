@@ -12,10 +12,11 @@ TEST_QUERY_PATH=dataset/test_query.json
 SAVE_PATH=checkpoint/
 MODEL_NAME=google-bert/bert-base-uncased
 EPOCHS=5
-BATCH_SIZE=64
+BATCH_SIZE=1
 LEARNING_RATE=1e-1
 MAX_LEN=512
 TEMPERATURE=0.07 
+IS_USING_MY_SAMLER=True
 
 CMD="poetry run python src/train.py \
     --seed $SEED \
@@ -30,6 +31,10 @@ CMD="poetry run python src/train.py \
     --batch_size $BATCH_SIZE \
     --learning_rate $LEARNING_RATE \
     --max_len $MAX_LEN \
-    --temperature $TEMPERATURE"
+    --temperature $TEMPERATURE"\
+
+if [ $IS_USING_MY_SAMLER = True ]; then
+    CMD="$CMD --is_using_my_sampler"
+fi
 
 $CMD

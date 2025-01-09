@@ -9,6 +9,7 @@ import numpy as np
 import os
 import random
 import dataset, model, loss_functions, metrix
+from sentence_transformers import SentenceTransformer
 
 class Experiment:
     def __init__(self, args):
@@ -34,10 +35,11 @@ class Experiment:
         valid_query_df = valid_query_df.explode("query").reset_index(drop=True)
         test_query_df = test_query_df.explode("query").reset_index(drop=True)
 
-        train_dataset = dataset.ContrastiveDataset(train_query_df, self.paper_df, self.tokenizer, self.args.max_len)
+        train_dataset = dataset.TrainDataset(train_query_df, self.paper_df, self.tokenizer, self.args.max_len)
+        # train_dataset = dataset.ContrastiveDataset(train_query_df, self.paper_df, self.tokenizer, self.args.max_len)
         val_dataset = dataset.ContrastiveDataset(valid_query_df, self.paper_df, self.tokenizer, self.args.max_len)
         test_dataset = dataset.ContrastiveDataset(test_query_df, self.paper_df, self.tokenizer, self.args.max_len)
-
+        
         self.train_dataloader = DataLoader(train_dataset, batch_size=self.args.batch_size, shuffle=True)
         self.valid_dataloader = DataLoader(val_dataset, batch_size=self.args.batch_size, shuffle=False)
         self.test_dataloader = DataLoader(test_dataset, batch_size=self.args.batch_size, shuffle=False)
@@ -63,14 +65,24 @@ class Experiment:
             total_loss = 0.0
 
             for batch in tqdm(self.train_dataloader, desc=f"Epoch {epoch+1}/{self.args.epochs}"):
+                # breakpoint()
                 query_input_ids = batch["query_input_ids"].to(self.device)
                 query_attention_mask = batch["query_attention_mask"].to(self.device)
                 abst_input_ids = batch["abst_input_ids"].to(self.device)
                 abst_attention_mask = batch["abst_attention_mask"].to(self.device)
+                if self.args.is_using_my_sampler:
+                    query_input_ids = query_input_ids.squeeze(0)
+                    query_attention_mask = query_attention_mask.squeeze(0)
+                    abst_input_ids = abst_input_ids.squeeze(0)
+                    abst_attention_mask = abst_attention_mask.squeeze(0)
+                    
 
                 # Forward
-                query_embed = self.model(query_input_ids, query_attention_mask)
-                abst_embed = self.model(abst_input_ids, abst_attention_mask)
+                # query_embed = self.model(query_input_ids, query_attention_mask)
+                # abst_embed = self.model(abst_input_ids, abst_attention_mask)
+                
+                query_embed = self.bert(query_input_ids, query_attention_mask)[0]
+                abst_embed = self.bert(abst_input_ids, abst_attention_mask)[0]
 
                 # 対照損失を計算
                 loss, _, _ = loss_functions.contrastive_loss(query_embed, abst_embed, 1/self.args.temperature, self.device)
@@ -210,6 +222,7 @@ if __name__ == "__main__":
     parser.add_argument("--learning_rate", type=float, default=1e-5, help="Learning rate")
     parser.add_argument("--max_len", type=int, default=512, help="Maximum sequence length")
     parser.add_argument("--temperature", type=float, default=0.07, help="Temperature parameter for contrastive loss")
+    parser.add_argument("--is_using_my_sampler", action='store_true', default=False, help="Whether to use my sampler")
     args = parser.parse_args()
 
     # Set seed
