@@ -8,8 +8,12 @@ import pandas as pd
 import numpy as np
 import os
 import random
-import dataset, model, loss_functions, metrix
+import dataset, model, loss_functions, metrics
 from sentence_transformers import SentenceTransformer
+from transformers import AutoModel
+import torch.nn as nn
+import torch.nn.functional as F
+import matplotlib.pyplot as plt
 
 class Experiment:
     def __init__(self, args):
@@ -37,16 +41,16 @@ class Experiment:
         test_query_df = test_query_df.explode("query").reset_index(drop=True)
         
         if self.args.is_using_my_sampler:
-            train_dataset = dataset.TrainDataset(train_query_df, self.paper_df, batch_size=self.args.batch_size)
+            train_dataset = dataset.TrainDataset(train_query_df, self.paper_df, self.tokenizer, self.args.max_len, batch_size=self.args.batch_size)
             self.train_dataloader = DataLoader(train_dataset, batch_size=1, shuffle=True, collate_fn=dataset.custom_train_collate_fn)
         else:
-            train_dataset = dataset.ContrastiveDataset(train_query_df, self.paper_df)
-            self.train_dataloader = DataLoader(train_dataset, batch_size=self.args.batch_size, shuffle=True, collate_fn=dataset.custom_collate_fn)
+            train_dataset = dataset.ContrastiveDataset(train_query_df, self.paper_df, self.tokenizer, self.args.max_len)
+            self.train_dataloader = DataLoader(train_dataset, batch_size=self.args.batch_size, shuffle=True)
 
-        val_dataset = dataset.ContrastiveDataset(valid_query_df, self.paper_df)         
+        val_dataset = dataset.ContrastiveDataset(valid_query_df, self.paper_df, self.tokenizer, self.args.max_len)      
         self.valid_dataloader = DataLoader(val_dataset, batch_size=self.args.batch_size, shuffle=False)
         
-        test_dataset = dataset.ContrastiveDataset(test_query_df, self.paper_df) 
+        test_dataset = dataset.ContrastiveDataset(test_query_df, self.paper_df, self.tokenizer, self.args.max_len)
         self.test_dataloader = DataLoader(test_dataset, batch_size=self.args.batch_size, shuffle=False)
 
         # 保存先のディレクトリを作成
@@ -65,25 +69,24 @@ class Experiment:
         """
         学習フェーズ
         """
-        for epoch in range(self.args.epochs):
+        loss_history = {'train': [], 'valid': []}
+        if self.args.is_using_my_sampler:
+            epochs = 1
+        else:
+            epochs = self.args.epochs
+        for epoch in range(epochs):
             self.model.train()
             total_loss = 0.0
 
-            for batch in tqdm(self.train_dataloader, desc=f"Epoch {epoch+1}/{self.args.epochs}"):
-                # breakpoint()
-                if self.args.is_using_my_sampler:
-                    query = batch["query"]
-                    abst = batch["abst"]
-                    category = batch["category"]
-                else:
-                    query = batch[0]
-                    abst = batch[1]
-                    category = batch[2] 
-                # Forward
-                # query_embed = self.model(query_input_ids, query_attention_mask)
-                # abst_embed = self.model(abst_input_ids, abst_attention_mask)
-                query_embed = self.model(query, self.device).to(self.device)
-                abst_embed = self.model(abst, self.device).to(self.device)
+            for i, batch in enumerate(tqdm(self.train_dataloader, desc=f"Epoch {epoch+1}/{self.args.epochs}")):
+                query_input_ids = batch["query_input_ids"].to(self.device)
+                query_attention_mask = batch["query_attention_mask"].to(self.device)
+                abst_input_ids = batch["abst_input_ids"].to(self.device)
+                abst_attention_mask = batch["abst_attention_mask"].to(self.device)
+                category = batch["category"]
+                # # Forward
+                query_embed = self.model(query_input_ids, query_attention_mask)
+                abst_embed = self.model(abst_input_ids, abst_attention_mask)
 
                 # 対照損失を計算
                 loss, _, _ = loss_functions.contrastive_loss(query_embed, abst_embed, self.logit_scale, self.device)
@@ -95,19 +98,53 @@ class Experiment:
 
                 total_loss += loss.item()
 
-            avg_loss = total_loss / len(self.train_dataloader)
-            (f"Train Loss: {avg_loss:.4f}")
+                if self.args.is_using_my_sampler:
+                    if int(int(len(self.train_dataloader) / int(self.args.batch_size))*self.args.epochs) == int(i + 1):
+                        break
+
+                    if int(int(i+1) % (len(self.train_dataloader) / int(self.args.batch_size))) == 0:
+                        avg_loss = total_loss / len(self.train_dataloader)
+                        loss_history['train'].append(avg_loss)
+                        print(f"Train Loss: {avg_loss:.4f}")
+
+                        # 検証フェーズ
+                        print(f"エポック : {int(int(i+1) / (len(self.train_dataloader) / int(self.args.batch_size)))}")
+                        avg_loss, _, _ = self.evaluate(self.test_dataloader)
+                        loss_history['valid'].append(avg_loss)
+                        print(f"Valid Loss: {avg_loss:.4f}")
+                        self.model.train()
+                        total_loss = 0.0
+                    
+
+            if self.args.is_using_my_sampler:
+                avg_loss = total_loss / (len(self.train_dataloader) % self.args.batch_size)
+                loss_history['train'].append(avg_loss)
+                print(f"Train Loss: {avg_loss:.4f}")
+
+            else:
+                avg_loss = total_loss / len(self.train_dataloader)
+                loss_history['train'].append(avg_loss)
+                print(f"Train Loss: {avg_loss:.4f}")
 
             # 検証フェーズ
-            loss, _, _ = self.evaluate(self.valid_dataloader)
-            print(f"Valid Loss: {loss:.4f}")
+            avg_loss, _, _ = self.evaluate(self.test_dataloader)
+            loss_history['valid'].append(avg_loss)
+            print(f"Valid Loss: {avg_loss:.4f}")
+
+
+        plt.plot(range(1, len(loss_history['train']) + 1), loss_history['train'], label="Train Loss")
+        plt.plot(range(1, len(loss_history['valid']) + 1), loss_history['valid'], label="Validation Loss")
+        plt.xlabel("Epoch")
+        plt.ylabel("Loss")
+        plt.legend()
+        plt.title("Training and Validation Loss")
         
-            if loss < self.best_valid_loss:
-                self.best_valid_loss = loss
-                os.makedirs(self.args.save_path, exist_ok=True)
-                torch.save(self.model.state_dict(), os.path.join(self.args.save_path, "best_model.pth"))
-        
-        torch.save(self.model.state_dict(), os.path.join(self.args.save_path, "final_model.pth"))
+        if self.args.is_using_my_sampler:
+            plt.savefig(os.path.join(self.args.save_path, f"loss_original_sampler_{self.args.batch_size}.png"))
+            torch.save(self.model.state_dict(), os.path.join(self.args.save_path, f"final_model_original_sampler_{self.args.batch_size}.pth"))
+        else:
+            plt.savefig(os.path.join(self.args.save_path, f"loss_{self.args.batch_size}.png"))
+            torch.save(self.model.state_dict(), os.path.join(self.args.save_path, "final_model_{self.args.batch_size}..pth"))
 
     @torch.no_grad()
     def evaluate(self, dataloader):
@@ -124,36 +161,39 @@ class Experiment:
         recall_k = {k: 0.0 for k in top_k}
         presicion_k = {k: 0.0 for k in top_k}
         ndcg_k = {k: 0.0 for k in top_k}
-        map = 0.0
+        map_k = {k: 0.0 for k in top_k}
         mrr = 0.0
 
         # 全ての論文のAbstractを埋め込む
-        abst_embeds = []
-        batch_size = self.args.batch_size
-        absts = self.paper_df["abstract"].tolist()
+        all_abst_embeds = []
+        all_absts = self.paper_df["abstract"].tolist()
 
-        for i in tqdm(range(0, len(absts), batch_size), desc="Abst Eembed"):
-            abst = absts[i:i + batch_size]
-            abst_embed = self.model(abst, self.device)
-            abst_embeds.append(abst_embed.cpu().numpy())
+        for i in tqdm(range(0, len(all_absts), self.args.batch_size), desc="Abst Eembed"):
+            abst = all_absts[i:i + self.args.batch_size]
+            abst_enc = self.tokenizer(
+                abst, truncation=True, max_length=self.args.max_len, padding="max_length", return_tensors="pt"
+            )
+            abst_input_ids = abst_enc["input_ids"].to(self.device)
+            abst_attention_mask = abst_enc["attention_mask"].to(self.device)
+            abst_embeds = self.model(abst_input_ids, abst_attention_mask)
+            all_abst_embeds.append(abst_embeds.cpu().numpy())
 
-        abst_embeds = np.concatenate(abst_embeds, axis=0)
+        all_abst_embeds = np.concatenate(all_abst_embeds, axis=0)
 
         # 各クエリで論文を検索
         for batch in tqdm(dataloader, desc=f"Test"):
-
-            query = batch[0]
-            abst = batch[1]
-            categories = batch[2] 
+            query_input_ids = batch["query_input_ids"].to(self.device)
+            query_attention_mask = batch["query_attention_mask"].to(self.device)
+            abst_input_ids = batch["abst_input_ids"].to(self.device)
+            abst_attention_mask = batch["abst_attention_mask"].to(self.device)
+            categories = batch["category"]
 
             # Forward
-            # query_embed = self.model(query_input_ids, query_attention_mask)
-            # abst_embed = self.model(abst_input_ids, abst_attention_mask)
-            query_embeds = self.model(query, self.device).to(self.device)
-            abst_embed = self.model(abst, self.device).to(self.device)
+            query_embeds = self.model(query_input_ids, query_attention_mask)
+            abst_embeds = self.model(abst_input_ids, abst_attention_mask)
 
             # 対照損失を計算
-            loss, _, _ = loss_functions.contrastive_loss(query_embeds, abst_embed, self.logit_scale, self.device)
+            loss, _, _ = loss_functions.contrastive_loss(query_embeds, abst_embeds, self.logit_scale, self.device)
             total_loss += loss.item()
 
             # sim(query, abst)を計算
@@ -161,7 +201,7 @@ class Experiment:
                 category = categories[i]
 
                 # sim(query, abst)を計算
-                sim_query2abst = np.dot(abst_embeds, query_embed.cpu().numpy())
+                sim_query2abst = np.dot(all_abst_embeds, query_embed.cpu().numpy())
                 preds = np.argsort(sim_query2abst)[::-1]
 
                 # 同カテゴリの論文をGTとする
@@ -172,22 +212,22 @@ class Experiment:
                 
                 # Top-kの評価指標を計算
                 for k in top_k:
-                    recall_k[k] += metrix.recall_at_k(preds, GT, k)
-                    presicion_k[k] += metrix.precision_at_k(preds, GT, k)
-                    ndcg_k[k] += metrix.ndcg_at_k(preds, GT, k)
+                    recall_k[k] += metrics.recall_at_k(preds, GT, k)
+                    map_k[k] += metrics.map_at_k(preds, GT, k)
+                    presicion_k[k] += metrics.precision_at_k(preds, GT, k)
+                    ndcg_k[k] += metrics.ndcg_at_k(preds, GT, k)
                 
-                map += metrix.map(preds, GT)
-                mrr += metrix.mrr(preds, GT)
+                mrr += metrics.mrr(preds, GT)
 
         # 評価指標を計算
         for k in top_k:
             recall_k[k] /= len(dataloader.dataset)
             presicion_k[k] /= len(dataloader.dataset)
+            map_k[k] /= len(dataloader.dataset)
             ndcg_k[k] /= len(dataloader.dataset)
-            print(f"Recall@{k}: {recall_k[k]:.4f}, Precision@{k}: {presicion_k[k]:.4f}, nDCG@{k}: {ndcg_k[k]:.4f}")
-        map /= len(dataloader.dataset)
+            print(f"Recall@{k}: {recall_k[k]:.4f}, Precision@{k}: {presicion_k[k]:.4f}, nDCG@{k}: {ndcg_k[k]:.4f}, mAP@{k}: {map_k[k]:.4f}")
         mrr /= len(dataloader.dataset)
-        print(f"mAP: {map:.4f}, MRR: {mrr:.4f}")
+        print(f"MRR: {mrr:.4f}")
 
         avg_loss = total_loss / len(dataloader)
 
@@ -199,10 +239,8 @@ class Experiment:
         """
         print("Starting training...")
         self.train()
+
         print("Starting testing...")
-        # # 重みをロードしてテストする場合は以下のコメントアウトを外す
-        # self.model = model.ContrastiveModel(self.args.model_name).to(self.device)
-        # self.model.load_state_dict(torch.load(os.path.join(self.args.save_path, "best_model.pth")))
         loss, _, _ = self.evaluate(self.test_dataloader)
         print(f"Test Loss: {loss:.4f}")
 

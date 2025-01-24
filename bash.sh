@@ -4,16 +4,16 @@ set -eux
 
 # 実験設定の変数定義
 SEED=42
-DEVICE=0
+DEVICE=1
 PAPER_PATH=dataset/paper.json
 TRAIN_QUERY_PATH=dataset/train_query.json
 VALID_QUERY_PATH=dataset/valid_query.json
 TEST_QUERY_PATH=dataset/test_query.json
 SAVE_PATH=checkpoint/
 MODEL_NAME=sentence-transformers/all-MiniLM-L6-v2
-EPOCHS=64
-BATCH_SIZE=64
-LEARNING_RATE=1e-3
+EPOCHS=10
+BATCH_SIZE=128
+LEARNING_RATE=1e-5
 MAX_LEN=512
 TEMPERATURE=0.07 
 IS_USING_MY_SAMLER=False

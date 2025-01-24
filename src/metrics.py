@@ -37,20 +37,21 @@ def precision_at_k(preds: list[int], GT: list[int], k: int) -> float:
     """
     return len(set(preds[:k]) & set(GT)) / k
 
-def map(preds: list[int], GT: list[int]) -> float:
+def map_at_k(preds: list[int], GT: list[int], k: int) -> float:
     """
-    mAPを計算する
+    mAP@kを計算する
     :param preds: 予測結果
     :param GT: 正解
-    :return: mAP
+    :param k: k
+    :return: mAP@k
     """
     relevant = 0
     ap_sum = 0
-    for i, pred in enumerate(preds):
+    for i, pred in enumerate(preds[:k]):
         if pred in GT:
             relevant += 1
             ap_sum += relevant / (i + 1)
-    return ap_sum / len(GT) if len(GT) > 0 else 0
+    return ap_sum / min(len(GT), k) if len(GT) > 0 else 0
 
 def mrr(preds: list[int], GT: list[int]) -> float:
     """
